@@ -1,0 +1,10 @@
+D:\Code\Fms_Db\Fms_Db\bin\Debug\Fms_Db.dacpac
+D:\Code\Fms_Db\Fms_Db\bin\Debug\Fms_Db.dll
+D:\Code\Fms_Db\Fms_Db\bin\Debug\Fms_Db.pdb
+D:\Code\Fms_Db\Fms_Db\obj\Debug\Fms_Db.sqlprojAssemblyReference.cache
+D:\Code\Fms_Db\Fms_Db\obj\Debug\Fms_Db.dll
+D:\Code\Fms_Db\Fms_Db\obj\Debug\Fms_Db.pdb
+D:\Code\Fms_Db\Fms_Db\obj\Debug\Model.xml
+D:\Code\Fms_Db\Fms_Db\obj\Debug\refactor.xml
+D:\Code\Fms_Db\Fms_Db\obj\Debug\postdeploy.sql
+D:\Code\Fms_Db\Fms_Db\obj\Debug\predeploy.sql

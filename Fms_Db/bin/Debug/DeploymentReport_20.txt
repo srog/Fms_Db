@@ -1,0 +1,45 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       None
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       None
+
+** User actions
+     Create
+       [dbo].[Division] (Table)
+       [dbo].[GameDetails] (Table)
+       [dbo].[Match] (Table)
+       [dbo].[MatchEvent] (Table)
+       [dbo].[MatchGoal] (Table)
+       [dbo].[News] (Table)
+       [dbo].[Player] (Table)
+       [dbo].[PlayerAttributes] (Table)
+       [dbo].[PlayerStats] (Table)
+       [dbo].[Season] (Table)
+       [dbo].[Team] (Table)
+       [dbo].[Transfer] (Table)
+       [dbo].[sp_GetAllDivisions] (Procedure)
+       [dbo].[sp_GetAllGameDetails] (Procedure)
+       [dbo].[sp_GetAllPlayers] (Procedure)
+       [dbo].[sp_GetAllTeams] (Procedure)
+       [dbo].[sp_GetDivisionById] (Procedure)
+       [dbo].[sp_GetNews] (Procedure)
+       [dbo].[sp_GetPlayerById] (Procedure)
+       [dbo].[sp_GetPlayersByTeam] (Procedure)
+       [dbo].[sp_GetTeamById] (Procedure)
+       [dbo].[sp_GetTeamsByDivision] (Procedure)
+       [dbo].[sp_InsertGameDetails] (Procedure)
+       [dbo].[sp_InsertNews] (Procedure)
+       [dbo].[sp_InsertPlayer] (Procedure)
+       [dbo].[sp_InsertPlayerAttributes] (Procedure)
+       [dbo].[sp_InsertPlayerStats] (Procedure)
+       [dbo].[sp_UpdatePlayer] (Procedure)
+       [dbo].[sp_UpdatePlayerAttributes] (Procedure)
+       [dbo].[sp_UpdatePlayerStats] (Procedure)
+       [dbo].[sp_UpdateTeam] (Procedure)
+
+** Supporting actions

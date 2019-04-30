@@ -1,0 +1,24 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       [dbo].[Division]
+       [dbo].[Player]
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       None
+
+** User actions
+     Table rebuild
+       [dbo].[Division] (Table)
+       [dbo].[Player] (Table)
+
+** Supporting actions
+     Refresh
+       [dbo].[sp_GetAllDivisions] (Procedure)
+       [dbo].[sp_GetDivisionById] (Procedure)
+       [dbo].[sp_GetAllPlayers] (Procedure)
+       [dbo].[sp_GetPlayerById] (Procedure)
+       [dbo].[sp_InsertPlayer] (Procedure)
+       [dbo].[sp_UpdatePlayer] (Procedure)

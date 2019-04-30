@@ -1,0 +1,22 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       [dbo].[GameDetails]
+       [dbo].[PlayerAttributes]
+       [dbo].[PlayerStats]
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       None
+
+** User actions
+     Table rebuild
+       [dbo].[GameDetails] (Table)
+       [dbo].[PlayerAttributes] (Table)
+       [dbo].[PlayerStats] (Table)
+
+** Supporting actions
+     Refresh
+       [dbo].[sp_GetAllGameDetails] (Procedure)
+       [dbo].[sp_InsertGameDetails] (Procedure)
