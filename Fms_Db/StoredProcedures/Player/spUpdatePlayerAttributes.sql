@@ -15,6 +15,7 @@
 	@strength int,
 	@tackling int
 AS
+DECLARE @result int
 	UPDATE [PlayerAttributes]  SET 
 	[Aggression] = @aggression, 
 	[Crossing] = @crossing, 
@@ -31,4 +32,9 @@ AS
 	[Strength] = @strength, 
 	[Tackling] = @tackling
 	WHERE [PlayerId] = @playerId
-RETURN 0
+
+		IF @@ERROR = 0 
+     SET @result  = 1
+  ELSE SET @result = 0
+
+	RETURN @result

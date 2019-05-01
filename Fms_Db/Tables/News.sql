@@ -6,5 +6,6 @@
 	[Week] INT,
 	[NewsText] NVARCHAR(MAX),
 	[PlayerId] INT,
-	[TeamId] INT
+	[TeamId] INT, 
+    [GameDetailsId] INT NOT NULL
 )

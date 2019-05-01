@@ -1,5 +1,5 @@
 ﻿CREATE PROCEDURE [dbo].[spGetPlayerById]
-	@id int = 0
+	@id int
 AS
 	SELECT * FROM [Player] WHERE [Id] = @id
 RETURN 0

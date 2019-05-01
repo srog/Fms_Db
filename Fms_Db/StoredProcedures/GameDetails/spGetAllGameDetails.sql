@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE [dbo].[sp_GetAllGameDetails]
+﻿CREATE PROCEDURE [dbo].[spGetAllGameDetails]
 
 AS
 	SELECT * FROM [GameDetails]

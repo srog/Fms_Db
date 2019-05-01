@@ -9,6 +9,8 @@
 	@retired bit,
 	@injuredWeeks int
 AS
+DECLARE @result int
+
 	UPDATE [Player]
 	SET [Name] = @name,
 		[Rating] = @rating,
@@ -19,4 +21,8 @@ AS
 		[Retired] = @retired,
 		[InjuredWeeks] = @injuredWeeks
 		WHERE [Id] = @id
-RETURN 0
+	IF @@ERROR = 0 
+     SET @result  = 1
+  ELSE SET @result = 0
+
+	RETURN @result

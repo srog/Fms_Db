@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE [dbo].[sp_GetAllPlayers]
+﻿CREATE PROCEDURE [dbo].[spGetAllPlayers]
 AS
 	SELECT * FROM [Player]
 RETURN 0
