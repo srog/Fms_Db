@@ -1,0 +1,18 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       None
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       None
+
+** User actions
+     Create
+       [dbo].[spGetSeasonById] (Procedure)
+       [dbo].[spGetSeasonsByGameId] (Procedure)
+       [dbo].[spInsertSeason] (Procedure)
+       [dbo].[spUpdateSeason] (Procedure)
+
+** Supporting actions

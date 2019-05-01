@@ -5,10 +5,17 @@
 	@goals int,
 	@playerId int
 AS
+	DECLARE @result int
+
 	UPDATE [PlayerStats] SET 
 	[Assists] = @assists, 
 	[CleanSheets] = @cleanSheets, 
 	[Games] = @games, 
 	[Goals] = @goals 
 	WHERE [PlayerId] = @playerId
-RETURN 0
+
+	IF @@ERROR = 0 
+     SET @result  = 1
+  ELSE SET @result = 0
+
+	RETURN @result

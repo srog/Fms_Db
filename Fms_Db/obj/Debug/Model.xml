@@ -12,7 +12,7 @@
 		</CustomData>
 		<CustomData Category="Reference" Type="Assembly">
 			<Metadata Name="LogicalName" Value="Fms_Db.dll" />
-			<Metadata Name="FileName" Value="D:\CODE\FMS_DB\FMS_DB\OBJ\DEBUG\FMS_DB.DLL" />
+			<Metadata Name="FileName" Value="D:\PROJECTS\PROJECTS\FMS3\FMS_DB\FMS_DB\OBJ\DEBUG\FMS_DB.DLL" />
 			<Metadata Name="AssemblyName" Value="Fms_Db" />
 			<Metadata Name="PermissionSet" Value="SAFE" />
 			<Metadata Name="Owner" Value="" />
@@ -20,7 +20,7 @@
 			<Metadata Name="IsVisible" Value="True" />
 			<Metadata Name="IsModelAware" Value="True" />
 			<Metadata Name="SkipCreationIfEmpty" Value="True" />
-			<Metadata Name="AssemblySymbolsName" Value="D:\Code\Fms_Db\Fms_Db\obj\Debug\Fms_Db.pdb" />
+			<Metadata Name="AssemblySymbolsName" Value="D:\Projects\Projects\FMS3\Fms_Db\Fms_Db\obj\Debug\Fms_Db.pdb" />
 		</CustomData>
 		<CustomData Category="SqlCmdVariables" Type="SqlCmdVariable" />
 	</Header>
@@ -50,44 +50,6 @@
 					<Element Type="SqlIndexedColumnSpecification">
 						<Relationship Name="Column">
 							<Entry>
-								<References Name="[dbo].[Division].[Id]" />
-							</Entry>
-						</Relationship>
-					</Element>
-				</Entry>
-			</Relationship>
-			<Relationship Name="DefiningTable">
-				<Entry>
-					<References Name="[dbo].[Division]" />
-				</Entry>
-			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="3" />
-		</Element>
-		<Element Type="SqlPrimaryKeyConstraint">
-			<Relationship Name="ColumnSpecifications">
-				<Entry>
-					<Element Type="SqlIndexedColumnSpecification">
-						<Relationship Name="Column">
-							<Entry>
-								<References Name="[dbo].[MatchEvent].[Id]" />
-							</Entry>
-						</Relationship>
-					</Element>
-				</Entry>
-			</Relationship>
-			<Relationship Name="DefiningTable">
-				<Entry>
-					<References Name="[dbo].[MatchEvent]" />
-				</Entry>
-			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="4" />
-		</Element>
-		<Element Type="SqlPrimaryKeyConstraint">
-			<Relationship Name="ColumnSpecifications">
-				<Entry>
-					<Element Type="SqlIndexedColumnSpecification">
-						<Relationship Name="Column">
-							<Entry>
 								<References Name="[dbo].[MatchGoal].[Id]" />
 							</Entry>
 						</Relationship>
@@ -99,26 +61,7 @@
 					<References Name="[dbo].[MatchGoal]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="5" />
-		</Element>
-		<Element Type="SqlPrimaryKeyConstraint">
-			<Relationship Name="ColumnSpecifications">
-				<Entry>
-					<Element Type="SqlIndexedColumnSpecification">
-						<Relationship Name="Column">
-							<Entry>
-								<References Name="[dbo].[Season].[Id]" />
-							</Entry>
-						</Relationship>
-					</Element>
-				</Entry>
-			</Relationship>
-			<Relationship Name="DefiningTable">
-				<Entry>
-					<References Name="[dbo].[Season]" />
-				</Entry>
-			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="6" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="3" />
 		</Element>
 		<Element Type="SqlPrimaryKeyConstraint">
 			<Relationship Name="ColumnSpecifications">
@@ -137,26 +80,7 @@
 					<References Name="[dbo].[Match]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="7" />
-		</Element>
-		<Element Type="SqlPrimaryKeyConstraint">
-			<Relationship Name="ColumnSpecifications">
-				<Entry>
-					<Element Type="SqlIndexedColumnSpecification">
-						<Relationship Name="Column">
-							<Entry>
-								<References Name="[dbo].[News].[Id]" />
-							</Entry>
-						</Relationship>
-					</Element>
-				</Entry>
-			</Relationship>
-			<Relationship Name="DefiningTable">
-				<Entry>
-					<References Name="[dbo].[News]" />
-				</Entry>
-			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="8" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="4" />
 		</Element>
 		<Element Type="SqlPrimaryKeyConstraint">
 			<Relationship Name="ColumnSpecifications">
@@ -175,51 +99,64 @@
 					<References Name="[dbo].[Transfer]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="9" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="5" />
 		</Element>
-		<Element Type="SqlTable" Name="[dbo].[Division]">
-			<Property Name="IsAnsiNullsOn" Value="True" />
-			<Relationship Name="Columns">
+		<Element Type="SqlPrimaryKeyConstraint">
+			<Relationship Name="ColumnSpecifications">
 				<Entry>
-					<Element Type="SqlSimpleColumn" Name="[dbo].[Division].[Id]">
-						<Property Name="IsNullable" Value="False" />
-						<Relationship Name="TypeSpecifier">
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
 							<Entry>
-								<Element Type="SqlTypeSpecifier">
-									<Relationship Name="Type">
-										<Entry>
-											<References ExternalSource="BuiltIns" Name="[int]" />
-										</Entry>
-									</Relationship>
-								</Element>
-							</Entry>
-						</Relationship>
-						<AttachedAnnotation Disambiguator="3" />
-					</Element>
-				</Entry>
-				<Entry>
-					<Element Type="SqlSimpleColumn" Name="[dbo].[Division].[Name]">
-						<Property Name="IsNullable" Value="False" />
-						<Relationship Name="TypeSpecifier">
-							<Entry>
-								<Element Type="SqlTypeSpecifier">
-									<Property Name="Length" Value="250" />
-									<Relationship Name="Type">
-										<Entry>
-											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
-										</Entry>
-									</Relationship>
-								</Element>
+								<References Name="[dbo].[News].[Id]" />
 							</Entry>
 						</Relationship>
 					</Element>
 				</Entry>
 			</Relationship>
-			<Relationship Name="Schema">
+			<Relationship Name="DefiningTable">
 				<Entry>
-					<References ExternalSource="BuiltIns" Name="[dbo]" />
+					<References Name="[dbo].[News]" />
 				</Entry>
 			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="6" />
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[MatchEvent].[Id]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[MatchEvent]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="7" />
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[Season].[Id]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[Season]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="8" />
 		</Element>
 		<Element Type="SqlTable" Name="[dbo].[GameDetails]">
 			<Property Name="IsAnsiNullsOn" Value="True" />
@@ -275,7 +212,7 @@
 					</Element>
 				</Entry>
 				<Entry>
-					<Element Type="SqlSimpleColumn" Name="[dbo].[GameDetails].[CurrentYear]">
+					<Element Type="SqlSimpleColumn" Name="[dbo].[GameDetails].[CurrentSeasonId]">
 						<Property Name="IsNullable" Value="False" />
 						<Relationship Name="TypeSpecifier">
 							<Entry>
@@ -312,7 +249,7 @@
 					<References ExternalSource="BuiltIns" Name="[dbo]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="10" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="9" />
 		</Element>
 		<Element Type="SqlTable" Name="[dbo].[Match]">
 			<Property Name="IsAnsiNullsOn" Value="True" />
@@ -332,7 +269,7 @@
 								</Element>
 							</Entry>
 						</Relationship>
-						<AttachedAnnotation Disambiguator="7" />
+						<AttachedAnnotation Disambiguator="4" />
 					</Element>
 				</Entry>
 				<Entry>
@@ -487,7 +424,7 @@
 								</Element>
 							</Entry>
 						</Relationship>
-						<AttachedAnnotation Disambiguator="4" />
+						<AttachedAnnotation Disambiguator="7" />
 					</Element>
 				</Entry>
 				<Entry>
@@ -593,7 +530,7 @@
 								</Element>
 							</Entry>
 						</Relationship>
-						<AttachedAnnotation Disambiguator="5" />
+						<AttachedAnnotation Disambiguator="3" />
 					</Element>
 				</Entry>
 				<Entry>
@@ -715,7 +652,7 @@
 								</Element>
 							</Entry>
 						</Relationship>
-						<AttachedAnnotation Disambiguator="8" />
+						<AttachedAnnotation Disambiguator="6" />
 					</Element>
 				</Entry>
 				<Entry>
@@ -809,6 +746,22 @@
 						</Relationship>
 					</Element>
 				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[News].[GameDetailsId]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
 			</Relationship>
 			<Relationship Name="Schema">
 				<Entry>
@@ -833,7 +786,7 @@
 					<References Name="[dbo].[GameDetails]" />
 				</Entry>
 			</Relationship>
-			<AttachedAnnotation Disambiguator="10" />
+			<AttachedAnnotation Disambiguator="9" />
 		</Element>
 		<Element Type="SqlPrimaryKeyConstraint" Name="[dbo].[PK_Player]">
 			<Relationship Name="ColumnSpecifications">
@@ -852,7 +805,7 @@
 					<References Name="[dbo].[Player]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="11" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="10" />
 		</Element>
 		<Element Type="SqlPrimaryKeyConstraint" Name="[dbo].[PK_PlayerAttributes]">
 			<Relationship Name="ColumnSpecifications">
@@ -871,7 +824,7 @@
 					<References Name="[dbo].[PlayerAttributes]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="12" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="11" />
 		</Element>
 		<Element Type="SqlPrimaryKeyConstraint" Name="[dbo].[PK_PlayerStats]">
 			<Relationship Name="ColumnSpecifications">
@@ -890,7 +843,7 @@
 					<References Name="[dbo].[PlayerStats]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="13" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="12" />
 		</Element>
 		<Element Type="SqlPrimaryKeyConstraint" Name="[dbo].[PK_Team]">
 			<Relationship Name="ColumnSpecifications">
@@ -909,7 +862,7 @@
 					<References Name="[dbo].[Team]" />
 				</Entry>
 			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="14" />
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="13" />
 		</Element>
 		<Element Type="SqlTable" Name="[dbo].[Player]">
 			<Property Name="IsAnsiNullsOn" Value="True" />
@@ -997,6 +950,7 @@
 				</Entry>
 				<Entry>
 					<Element Type="SqlSimpleColumn" Name="[dbo].[Player].[TeamId]">
+						<Property Name="IsNullable" Value="False" />
 						<Relationship Name="TypeSpecifier">
 							<Entry>
 								<Element Type="SqlTypeSpecifier">
@@ -1027,6 +981,7 @@
 				</Entry>
 				<Entry>
 					<Element Type="SqlSimpleColumn" Name="[dbo].[Player].[Retired]">
+						<Property Name="IsNullable" Value="False" />
 						<Relationship Name="TypeSpecifier">
 							<Entry>
 								<Element Type="SqlTypeSpecifier">
@@ -1055,13 +1010,29 @@
 						</Relationship>
 					</Element>
 				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Player].[GameDetailsId]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
 			</Relationship>
 			<Relationship Name="Schema">
 				<Entry>
 					<References ExternalSource="BuiltIns" Name="[dbo]" />
 				</Entry>
 			</Relationship>
-			<AttachedAnnotation Disambiguator="11" />
+			<AttachedAnnotation Disambiguator="10" />
 		</Element>
 		<Element Type="SqlTable" Name="[dbo].[PlayerAttributes]">
 			<Property Name="IsAnsiNullsOn" Value="True" />
@@ -1329,7 +1300,7 @@
 					<References ExternalSource="BuiltIns" Name="[dbo]" />
 				</Entry>
 			</Relationship>
-			<AttachedAnnotation Disambiguator="12" />
+			<AttachedAnnotation Disambiguator="11" />
 		</Element>
 		<Element Type="SqlTable" Name="[dbo].[PlayerStats]">
 			<Property Name="IsAnsiNullsOn" Value="True" />
@@ -1437,7 +1408,7 @@
 					<References ExternalSource="BuiltIns" Name="[dbo]" />
 				</Entry>
 			</Relationship>
-			<AttachedAnnotation Disambiguator="13" />
+			<AttachedAnnotation Disambiguator="12" />
 		</Element>
 		<Element Type="SqlTable" Name="[dbo].[Season]">
 			<Property Name="IsAnsiNullsOn" Value="True" />
@@ -1457,11 +1428,11 @@
 								</Element>
 							</Entry>
 						</Relationship>
-						<AttachedAnnotation Disambiguator="6" />
+						<AttachedAnnotation Disambiguator="8" />
 					</Element>
 				</Entry>
 				<Entry>
-					<Element Type="SqlSimpleColumn" Name="[dbo].[Season].[GameDetailId]">
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Season].[GameDetailsId]">
 						<Property Name="IsNullable" Value="False" />
 						<Relationship Name="TypeSpecifier">
 							<Entry>
@@ -1515,64 +1486,11 @@
 				</Entry>
 			</Relationship>
 		</Element>
-		<Element Type="SqlProcedure" Name="[dbo].[sp_GetAllDivisions]">
+		<Element Type="SqlProcedure" Name="[dbo].[spAdvanceAllPlayerAges]">
 			<Property Name="BodyScript">
 				<Value><![CDATA[
-	SELECT [Id], [Name] FROM [Division]
-RETURN 0]]></Value>
-			</Property>
-			<Property Name="IsAnsiNullsOn" Value="True" />
-			<Relationship Name="BodyDependencies">
-				<Entry>
-					<References Name="[dbo].[Division]" />
-				</Entry>
-				<Entry>
-					<References Name="[dbo].[Division].[Id]" />
-				</Entry>
-				<Entry>
-					<References Name="[dbo].[Division].[Name]" />
-				</Entry>
-			</Relationship>
-			<Relationship Name="Schema">
-				<Entry>
-					<References ExternalSource="BuiltIns" Name="[dbo]" />
-				</Entry>
-			</Relationship>
-			<Annotation Type="SysCommentsObjectAnnotation">
-				<Property Name="Length" Value="95" />
-				<Property Name="StartLine" Value="1" />
-				<Property Name="StartColumn" Value="1" />
-				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[sp_GetAllDivisions]&#xD;&#xA;AS" />
-			</Annotation>
-		</Element>
-		<Element Type="SqlProcedure" Name="[dbo].[sp_GetAllGameDetails]">
-			<Property Name="BodyScript">
-				<Value><![CDATA[
-	SELECT * FROM [GameDetails]
-RETURN 0]]></Value>
-			</Property>
-			<Property Name="IsAnsiNullsOn" Value="True" />
-			<Relationship Name="BodyDependencies">
-				<Entry>
-					<References Name="[dbo].[GameDetails]" />
-				</Entry>
-			</Relationship>
-			<Relationship Name="Schema">
-				<Entry>
-					<References ExternalSource="BuiltIns" Name="[dbo]" />
-				</Entry>
-			</Relationship>
-			<Annotation Type="SysCommentsObjectAnnotation">
-				<Property Name="Length" Value="91" />
-				<Property Name="StartLine" Value="1" />
-				<Property Name="StartColumn" Value="1" />
-				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[sp_GetAllGameDetails]&#xD;&#xA;&#xD;&#xA;AS" />
-			</Annotation>
-		</Element>
-		<Element Type="SqlProcedure" Name="[dbo].[sp_GetAllPlayers]">
-			<Property Name="BodyScript">
-				<Value><![CDATA[
-	SELECT * FROM [Player]
+	UPDATE [Player] SET [Age] = [Age] + 1
+		WHERE [GameDetailsId] = @gameDetailsId
 RETURN 0]]></Value>
 			</Property>
 			<Property Name="IsAnsiNullsOn" Value="True" />
@@ -1580,64 +1498,19 @@ RETURN 0]]></Value>
 				<Entry>
 					<References Name="[dbo].[Player]" />
 				</Entry>
-			</Relationship>
-			<Relationship Name="Schema">
 				<Entry>
-					<References ExternalSource="BuiltIns" Name="[dbo]" />
-				</Entry>
-			</Relationship>
-			<Annotation Type="SysCommentsObjectAnnotation">
-				<Property Name="Length" Value="80" />
-				<Property Name="StartLine" Value="1" />
-				<Property Name="StartColumn" Value="1" />
-				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[sp_GetAllPlayers]&#xD;&#xA;AS" />
-			</Annotation>
-		</Element>
-		<Element Type="SqlProcedure" Name="[dbo].[sp_GetAllTeams]">
-			<Property Name="BodyScript">
-				<Value><![CDATA[
-	SELECT * FROM [Team]
-RETURN 0]]></Value>
-			</Property>
-			<Property Name="IsAnsiNullsOn" Value="True" />
-			<Relationship Name="BodyDependencies">
-				<Entry>
-					<References Name="[dbo].[Team]" />
-				</Entry>
-			</Relationship>
-			<Relationship Name="Schema">
-				<Entry>
-					<References ExternalSource="BuiltIns" Name="[dbo]" />
-				</Entry>
-			</Relationship>
-			<Annotation Type="SysCommentsObjectAnnotation">
-				<Property Name="Length" Value="78" />
-				<Property Name="StartLine" Value="1" />
-				<Property Name="StartColumn" Value="1" />
-				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[sp_GetAllTeams]&#xD;&#xA;&#xD;&#xA;AS" />
-			</Annotation>
-		</Element>
-		<Element Type="SqlProcedure" Name="[dbo].[sp_GetDivisionById]">
-			<Property Name="BodyScript">
-				<Value><![CDATA[
-	SELECT * FROM [Division] WHERE [Id] = @id
-RETURN 0]]></Value>
-			</Property>
-			<Property Name="IsAnsiNullsOn" Value="True" />
-			<Relationship Name="BodyDependencies">
-				<Entry>
-					<References Name="[dbo].[Division]" />
+					<References Name="[dbo].[Player].[Age]" />
 				</Entry>
 				<Entry>
-					<References Name="[dbo].[Division].[Id]" />
+					<References Name="[dbo].[Player].[GameDetailsId]" />
 				</Entry>
 				<Entry>
-					<References Name="[dbo].[sp_GetDivisionById].[@id]" />
+					<References Name="[dbo].[spAdvanceAllPlayerAges].[@gameDetailsId]" />
 				</Entry>
 			</Relationship>
 			<Relationship Name="Parameters">
 				<Entry>
-					<Element Type="SqlSubroutineParameter" Name="[dbo].[sp_GetDivisionById].[@id]">
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spAdvanceAllPlayerAges].[@gameDetailsId]">
 						<Relationship Name="Type">
 							<Entry>
 								<Element Type="SqlTypeSpecifier">
@@ -1658,13 +1531,206 @@ RETURN 0]]></Value>
 				</Entry>
 			</Relationship>
 			<Annotation Type="SysCommentsObjectAnnotation">
-				<Property Name="Length" Value="111" />
+				<Property Name="Length" Value="164" />
 				<Property Name="StartLine" Value="1" />
 				<Property Name="StartColumn" Value="1" />
-				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[sp_GetDivisionById]&#xD;&#xA;&#x9;@id int&#xD;&#xA;AS" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spAdvanceAllPlayerAges]&#xD;&#xA;&#x9;@gameDetailsId int&#xD;&#xA;AS" />
 			</Annotation>
 		</Element>
-		<Element Type="SqlProcedure" Name="[dbo].[sp_GetNews]">
+		<Element Type="SqlProcedure" Name="[dbo].[spDeleteGameDetails]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+	DELETE FROM [GameDetails] WHERE [Id] = @id
+RETURN 0]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[GameDetails]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[GameDetails].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spDeleteGameDetails].[@id]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spDeleteGameDetails].[@id]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="113" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spDeleteGameDetails]&#xD;&#xA;&#x9;@id int&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[spGetAllFreeAgents]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+	SELECT * FROM [Player] WHERE [TeamId] = 0 
+RETURN 0]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Player]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Player].[TeamId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="102" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spGetAllFreeAgents]&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[spGetAllGameDetails]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+	SELECT * FROM [GameDetails]
+RETURN 0]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[GameDetails]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="90" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spGetAllGameDetails]&#xD;&#xA;&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[spGetAllPlayers]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+	SELECT * FROM [Player]
+RETURN 0]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Player]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="79" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spGetAllPlayers]&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[spGetAllTeams]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+	SELECT * FROM [Team]
+RETURN 0]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Team]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="77" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spGetAllTeams]&#xD;&#xA;&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[spGetGameDetailsById]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+	SELECT * FROM [GameDetails] WHERE [Id] = @id
+RETURN 0]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[GameDetails]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[GameDetails].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spGetGameDetailsById].[@id]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spGetGameDetailsById].[@id]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="116" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spGetGameDetailsById]&#xD;&#xA;&#x9;@id int&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[spGetNews]">
 			<Property Name="BodyScript">
 				<Value><![CDATA[
 	SELECT * FROM [News]
@@ -1685,31 +1751,31 @@ RETURN 0]]></Value>
 					<References Name="[dbo].[News].[SeasonId]" />
 				</Entry>
 				<Entry>
-					<References Name="[dbo].[sp_GetNews].[@seasonId]" />
+					<References Name="[dbo].[spGetNews].[@seasonId]" />
 				</Entry>
 				<Entry>
 					<References Name="[dbo].[News].[DivisionId]" />
 				</Entry>
 				<Entry>
-					<References Name="[dbo].[sp_GetNews].[@divisionId]" />
+					<References Name="[dbo].[spGetNews].[@divisionId]" />
 				</Entry>
 				<Entry>
 					<References Name="[dbo].[News].[Week]" />
 				</Entry>
 				<Entry>
-					<References Name="[dbo].[sp_GetNews].[@week]" />
+					<References Name="[dbo].[spGetNews].[@week]" />
 				</Entry>
 				<Entry>
 					<References Name="[dbo].[News].[PlayerId]" />
 				</Entry>
 				<Entry>
-					<References Name="[dbo].[sp_GetNews].[@playerId]" />
+					<References Name="[dbo].[spGetNews].[@playerId]" />
 				</Entry>
 				<Entry>
 					<References Name="[dbo].[News].[TeamId]" />
 				</Entry>
 				<Entry>
-					<References Name="[dbo].[sp_GetNews].[@teamId]" />
+					<References Name="[dbo].[spGetNews].[@teamId]" />
 				</Entry>
 				<Entry>
 					<References Name="[dbo].[News].[Id]" />
@@ -1717,7 +1783,7 @@ RETURN 0]]></Value>
 			</Relationship>
 			<Relationship Name="Parameters">
 				<Entry>
-					<Element Type="SqlSubroutineParameter" Name="[dbo].[sp_GetNews].[@seasonId]">
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spGetNews].[@seasonId]">
 						<Property Name="DefaultExpressionScript">
 							<Value><![CDATA[null]]></Value>
 						</Property>
@@ -1735,7 +1801,7 @@ RETURN 0]]></Value>
 					</Element>
 				</Entry>
 				<Entry>
-					<Element Type="SqlSubroutineParameter" Name="[dbo].[sp_GetNews].[@divisionId]">
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spGetNews].[@divisionId]">
 						<Property Name="DefaultExpressionScript">
 							<Value><![CDATA[null]]></Value>
 						</Property>
@@ -1753,7 +1819,7 @@ RETURN 0]]></Value>
 					</Element>
 				</Entry>
 				<Entry>
-					<Element Type="SqlSubroutineParameter" Name="[dbo].[sp_GetNews].[@week]">
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spGetNews].[@week]">
 						<Property Name="DefaultExpressionScript">
 							<Value><![CDATA[null]]></Value>
 						</Property>
@@ -1771,7 +1837,7 @@ RETURN 0]]></Value>
 					</Element>
 				</Entry>
 				<Entry>
-					<Element Type="SqlSubroutineParameter" Name="[dbo].[sp_GetNews].[@playerId]">
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spGetNews].[@playerId]">
 						<Property Name="DefaultExpressionScript">
 							<Value><![CDATA[null]]></Value>
 						</Property>
@@ -1789,7 +1855,7 @@ RETURN 0]]></Value>
 					</Element>
 				</Entry>
 				<Entry>
-					<Element Type="SqlSubroutineParameter" Name="[dbo].[sp_GetNews].[@teamId]">
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spGetNews].[@teamId]">
 						<Property Name="DefaultExpressionScript">
 							<Value><![CDATA[null]]></Value>
 						</Property>
@@ -1813,13 +1879,60 @@ RETURN 0]]></Value>
 				</Entry>
 			</Relationship>
 			<Annotation Type="SysCommentsObjectAnnotation">
-				<Property Name="Length" Value="391" />
+				<Property Name="Length" Value="390" />
 				<Property Name="StartLine" Value="1" />
 				<Property Name="StartColumn" Value="1" />
-				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[sp_GetNews]&#xD;&#xA;&#x9;@seasonId int = null,&#xD;&#xA;&#x9;@divisionId int = null,&#xD;&#xA;&#x9;@week int = null,&#xD;&#xA;&#x9;@playerId int = null,&#xD;&#xA;&#x9;@teamId int = null&#xD;&#xA;AS" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spGetNews]&#xD;&#xA;&#x9;@seasonId int = null,&#xD;&#xA;&#x9;@divisionId int = null,&#xD;&#xA;&#x9;@week int = null,&#xD;&#xA;&#x9;@playerId int = null,&#xD;&#xA;&#x9;@teamId int = null&#xD;&#xA;AS" />
 			</Annotation>
 		</Element>
-		<Element Type="SqlProcedure" Name="[dbo].[sp_GetPlayerById]">
+		<Element Type="SqlProcedure" Name="[dbo].[spGetPlayerAttributes]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+	SELECT * FROM [PlayerAttributes] WHERE [PlayerId] = @playerId
+RETURN 0]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[PlayerAttributes]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[PlayerAttributes].[PlayerId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spGetPlayerAttributes].[@playerId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spGetPlayerAttributes].[@playerId]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="140" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spGetPlayerAttributes]&#xD;&#xA;&#x9;@playerId int&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[spGetPlayerById]">
 			<Property Name="BodyScript">
 				<Value><![CDATA[
 	SELECT * FROM [Player] WHERE [Id] = @id
@@ -1834,15 +1947,12 @@ RETURN 0]]></Value>
 					<References Name="[dbo].[Player].[Id]" />
 				</Entry>
 				<Entry>
-					<References Name="[dbo].[sp_GetPlayerById].[@id]" />
+					<References Name="[dbo].[spGetPlayerById].[@id]" />
 				</Entry>
 			</Relationship>
 			<Relationship Name="Parameters">
 				<Entry>
-					<Element Type="SqlSubroutineParameter" Name="[dbo].[sp_GetPlayerById].[@id]">
-						<Property Name="DefaultExpressionScript">
-							<Value><![CDATA[0]]></Value>
-						</Property>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spGetPlayerById].[@id]">
 						<Relationship Name="Type">
 							<Entry>
 								<Element Type="SqlTypeSpecifier">
@@ -1863,13 +1973,60 @@ RETURN 0]]></Value>
 				</Entry>
 			</Relationship>
 			<Annotation Type="SysCommentsObjectAnnotation">
-				<Property Name="Length" Value="111" />
+				<Property Name="Length" Value="106" />
 				<Property Name="StartLine" Value="1" />
 				<Property Name="StartColumn" Value="1" />
-				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[sp_GetPlayerById]&#xD;&#xA;&#x9;@id int = 0&#xD;&#xA;AS" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spGetPlayerById]&#xD;&#xA;&#x9;@id int&#xD;&#xA;AS" />
 			</Annotation>
 		</Element>
-		<Element Type="SqlProcedure" Name="[dbo].[sp_GetPlayersByTeam]">
+		<Element Type="SqlProcedure" Name="[dbo].[spGetPlayersByGame]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+	SELECT * FROM [Player] WHERE [GameDetailsId] = @gameDetailsId
+RETURN 0]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Player]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Player].[GameDetailsId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spGetPlayersByGame].[@gameDetailsId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spGetPlayersByGame].[@gameDetailsId]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="142" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spGetPlayersByGame]&#xD;&#xA;&#x9;@gameDetailsId int&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[spGetPlayersByTeamId]">
 			<Property Name="BodyScript">
 				<Value><![CDATA[
 	SELECT * FROM [Player] WHERE [TeamId] = @teamId
@@ -1884,12 +2041,12 @@ RETURN 0]]></Value>
 					<References Name="[dbo].[Player].[TeamId]" />
 				</Entry>
 				<Entry>
-					<References Name="[dbo].[sp_GetPlayersByTeam].[@teamId]" />
+					<References Name="[dbo].[spGetPlayersByTeamId].[@teamId]" />
 				</Entry>
 			</Relationship>
 			<Relationship Name="Parameters">
 				<Entry>
-					<Element Type="SqlSubroutineParameter" Name="[dbo].[sp_GetPlayersByTeam].[@teamId]">
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spGetPlayersByTeamId].[@teamId]">
 						<Relationship Name="Type">
 							<Entry>
 								<Element Type="SqlTypeSpecifier">
@@ -1910,13 +2067,155 @@ RETURN 0]]></Value>
 				</Entry>
 			</Relationship>
 			<Annotation Type="SysCommentsObjectAnnotation">
-				<Property Name="Length" Value="122" />
+				<Property Name="Length" Value="123" />
 				<Property Name="StartLine" Value="1" />
 				<Property Name="StartColumn" Value="1" />
-				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[sp_GetPlayersByTeam]&#xD;&#xA;&#x9;@teamId int&#xD;&#xA;AS" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spGetPlayersByTeamId]&#xD;&#xA;&#x9;@teamId int&#xD;&#xA;AS" />
 			</Annotation>
 		</Element>
-		<Element Type="SqlProcedure" Name="[dbo].[sp_GetTeamById]">
+		<Element Type="SqlProcedure" Name="[dbo].[spGetPlayerStats]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+	SELECT * FROM [PlayerStats] WHERE [PlayerId] = @playerId
+RETURN 0]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[PlayerStats]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[PlayerStats].[PlayerId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spGetPlayerStats].[@playerId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spGetPlayerStats].[@playerId]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="130" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spGetPlayerStats]&#xD;&#xA;&#x9;@playerId int&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[spGetSeasonById]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+	SELECT * FROM [Season] WHERE [Id] = @id
+RETURN 0]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Season]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Season].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spGetSeasonById].[@id]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spGetSeasonById].[@id]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="106" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spGetSeasonById]&#xD;&#xA;&#x9;@id int&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[spGetSeasonsByGameId]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+
+	SELECT * FROM [Season] WHERE [GameDetailsId] = @gameDetailsId
+RETURN 0]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Season]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Season].[GameDetailsId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spGetSeasonsByGameId].[@gameDetailsId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spGetSeasonsByGameId].[@gameDetailsId]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="146" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spGetSeasonsByGameId]&#xD;&#xA;&#x9;@gameDetailsId int&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[spGetTeamById]">
 			<Property Name="BodyScript">
 				<Value><![CDATA[
 	SELECT * FROM [Team] WHERE [Id] = @id
@@ -1931,12 +2230,12 @@ RETURN 0]]></Value>
 					<References Name="[dbo].[Team].[Id]" />
 				</Entry>
 				<Entry>
-					<References Name="[dbo].[sp_GetTeamById].[@id]" />
+					<References Name="[dbo].[spGetTeamById].[@id]" />
 				</Entry>
 			</Relationship>
 			<Relationship Name="Parameters">
 				<Entry>
-					<Element Type="SqlSubroutineParameter" Name="[dbo].[sp_GetTeamById].[@id]">
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spGetTeamById].[@id]">
 						<Relationship Name="Type">
 							<Entry>
 								<Element Type="SqlTypeSpecifier">
@@ -1957,16 +2256,16 @@ RETURN 0]]></Value>
 				</Entry>
 			</Relationship>
 			<Annotation Type="SysCommentsObjectAnnotation">
-				<Property Name="Length" Value="103" />
+				<Property Name="Length" Value="102" />
 				<Property Name="StartLine" Value="1" />
 				<Property Name="StartColumn" Value="1" />
-				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[sp_GetTeamById]&#xD;&#xA;&#x9;@id int&#xD;&#xA;AS" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spGetTeamById]&#xD;&#xA;&#x9;@id int&#xD;&#xA;AS" />
 			</Annotation>
 		</Element>
-		<Element Type="SqlProcedure" Name="[dbo].[sp_GetTeamsByDivision]">
+		<Element Type="SqlProcedure" Name="[dbo].[spGetTeamsByDivision]">
 			<Property Name="BodyScript">
 				<Value><![CDATA[
-	SELECT * FROM [Team] WHERE [Division] = @divisionId
+	SELECT * FROM [Team] WHERE [DivisionId] = @divisionId
 RETURN 0]]></Value>
 			</Property>
 			<Property Name="IsAnsiNullsOn" Value="True" />
@@ -1975,15 +2274,15 @@ RETURN 0]]></Value>
 					<References Name="[dbo].[Team]" />
 				</Entry>
 				<Entry>
-					<References Name="[dbo].[Team].[Division]" />
+					<References Name="[dbo].[Team].[DivisionId]" />
 				</Entry>
 				<Entry>
-					<References Name="[dbo].[sp_GetTeamsByDivision].[@divisionId]" />
+					<References Name="[dbo].[spGetTeamsByDivision].[@divisionId]" />
 				</Entry>
 			</Relationship>
 			<Relationship Name="Parameters">
 				<Entry>
-					<Element Type="SqlSubroutineParameter" Name="[dbo].[sp_GetTeamsByDivision].[@divisionId]">
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spGetTeamsByDivision].[@divisionId]">
 						<Relationship Name="Type">
 							<Entry>
 								<Element Type="SqlTypeSpecifier">
@@ -2004,21 +2303,79 @@ RETURN 0]]></Value>
 				</Entry>
 			</Relationship>
 			<Annotation Type="SysCommentsObjectAnnotation">
-				<Property Name="Length" Value="132" />
+				<Property Name="Length" Value="133" />
 				<Property Name="StartLine" Value="1" />
 				<Property Name="StartColumn" Value="1" />
-				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[sp_GetTeamsByDivision]&#xD;&#xA;&#x9;@divisionId int&#xD;&#xA;AS" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spGetTeamsByDivision]&#xD;&#xA;&#x9;@divisionId int&#xD;&#xA;AS" />
 			</Annotation>
 		</Element>
-		<Element Type="SqlProcedure" Name="[dbo].[sp_InsertGameDetails]">
+		<Element Type="SqlProcedure" Name="[dbo].[spGetTeamsByGame]">
 			<Property Name="BodyScript">
 				<Value><![CDATA[
-	INSERT INTO [GameDetails] ([TeamId], [ManagerName], [CurrentYear], [CurrentWeek])
-	VALUES (@teamId, @managerName,2020, 0)
+	SELECT * FROM [Team] WHERE [GameDetailsId] = @gameDetailsId
 RETURN 0]]></Value>
 			</Property>
 			<Property Name="IsAnsiNullsOn" Value="True" />
 			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Team]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Team].[GameDetailsId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spGetTeamsByGame].[@gameDetailsId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spGetTeamsByGame].[@gameDetailsId]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="138" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spGetTeamsByGame]&#xD;&#xA;&#x9;@gameDetailsId int&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[spInsertGameDetails]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+	DECLARE @result int
+	INSERT INTO [GameDetails] ([TeamId], [ManagerName], [CurrentSeasonId], [CurrentWeek])
+	VALUES (@teamId, @managerName,2020, 0)
+
+	SELECT @id = SCOPE_IDENTITY()
+
+	IF @@ERROR = 0 
+     SET @result  = 1
+  ELSE SET @result = 0
+
+RETURN @result]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
 				<Entry>
 					<References Name="[dbo].[GameDetails]" />
 				</Entry>
@@ -2029,21 +2386,25 @@ RETURN 0]]></Value>
 					<References Name="[dbo].[GameDetails].[ManagerName]" />
 				</Entry>
 				<Entry>
-					<References Name="[dbo].[GameDetails].[CurrentYear]" />
+					<References Name="[dbo].[GameDetails].[CurrentSeasonId]" />
 				</Entry>
 				<Entry>
 					<References Name="[dbo].[GameDetails].[CurrentWeek]" />
 				</Entry>
 				<Entry>
-					<References Name="[dbo].[sp_InsertGameDetails].[@teamId]" />
+					<References Name="[dbo].[spInsertGameDetails].[@teamId]" />
 				</Entry>
 				<Entry>
-					<References Name="[dbo].[sp_InsertGameDetails].[@managerName]" />
+					<References Name="[dbo].[spInsertGameDetails].[@managerName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spInsertGameDetails].[@id]" />
 				</Entry>
 			</Relationship>
 			<Relationship Name="Parameters">
 				<Entry>
-					<Element Type="SqlSubroutineParameter" Name="[dbo].[sp_InsertGameDetails].[@teamId]">
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spInsertGameDetails].[@id]">
+						<Property Name="IsOutput" Value="True" />
 						<Relationship Name="Type">
 							<Entry>
 								<Element Type="SqlTypeSpecifier">
@@ -2058,7 +2419,22 @@ RETURN 0]]></Value>
 					</Element>
 				</Entry>
 				<Entry>
-					<Element Type="SqlSubroutineParameter" Name="[dbo].[sp_InsertGameDetails].[@managerName]">
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spInsertGameDetails].[@teamId]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spInsertGameDetails].[@managerName]">
 						<Relationship Name="Type">
 							<Entry>
 								<Element Type="SqlTypeSpecifier">
@@ -2073,6 +2449,21 @@ RETURN 0]]></Value>
 						</Relationship>
 					</Element>
 				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spInsertGameDetails].[@currentSeasonid]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
 			</Relationship>
 			<Relationship Name="Schema">
 				<Entry>
@@ -2080,21 +2471,33 @@ RETURN 0]]></Value>
 				</Entry>
 			</Relationship>
 			<Annotation Type="SysCommentsObjectAnnotation">
-				<Property Name="Length" Value="228" />
+				<Property Name="Length" Value="404" />
 				<Property Name="StartLine" Value="1" />
 				<Property Name="StartColumn" Value="1" />
-				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[sp_InsertGameDetails]&#xD;&#xA;&#x9;@teamId int,&#xD;&#xA;&#x9;@managerName nvarchar(250)&#xD;&#xA;AS" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spInsertGameDetails]&#xD;&#xA;&#x9;@id int OUTPUT,&#xD;&#xA;&#x9;@teamId int,&#xD;&#xA;&#x9;@managerName nvarchar(250),&#xD;&#xA;&#x9;@currentSeasonid int&#xD;&#xA;AS" />
 			</Annotation>
 		</Element>
-		<Element Type="SqlProcedure" Name="[dbo].[sp_InsertNews]">
+		<Element Type="SqlProcedure" Name="[dbo].[spInsertNews]">
 			<Property Name="BodyScript">
 				<Value><![CDATA[
+	DEClARE @result int
 	INSERT INTO [News] ([SeasonId], [DivisionId], [Week], [PlayerId], [TeamId], [NewsText])
 	VALUES (@seasonId, @divisionId, @week, @playerId, @teamId, @newsText)
-RETURN 0]]></Value>
+
+
+		SELECT @id = SCOPE_IDENTITY()
+
+	IF @@ERROR = 0 
+     SET @result  = 1
+  ELSE SET @result = 0
+
+  RETURN @result]]></Value>
 			</Property>
 			<Property Name="IsAnsiNullsOn" Value="True" />
 			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
 				<Entry>
 					<References Name="[dbo].[News]" />
 				</Entry>
@@ -2117,27 +2520,31 @@ RETURN 0]]></Value>
 					<References Name="[dbo].[News].[NewsText]" />
 				</Entry>
 				<Entry>
-					<References Name="[dbo].[sp_InsertNews].[@seasonId]" />
+					<References Name="[dbo].[spInsertNews].[@seasonId]" />
 				</Entry>
 				<Entry>
-					<References Name="[dbo].[sp_InsertNews].[@divisionId]" />
+					<References Name="[dbo].[spInsertNews].[@divisionId]" />
 				</Entry>
 				<Entry>
-					<References Name="[dbo].[sp_InsertNews].[@week]" />
+					<References Name="[dbo].[spInsertNews].[@week]" />
 				</Entry>
 				<Entry>
-					<References Name="[dbo].[sp_InsertNews].[@playerId]" />
+					<References Name="[dbo].[spInsertNews].[@playerId]" />
 				</Entry>
 				<Entry>
-					<References Name="[dbo].[sp_InsertNews].[@teamId]" />
+					<References Name="[dbo].[spInsertNews].[@teamId]" />
 				</Entry>
 				<Entry>
-					<References Name="[dbo].[sp_InsertNews].[@newsText]" />
+					<References Name="[dbo].[spInsertNews].[@newsText]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spInsertNews].[@id]" />
 				</Entry>
 			</Relationship>
 			<Relationship Name="Parameters">
 				<Entry>
-					<Element Type="SqlSubroutineParameter" Name="[dbo].[sp_InsertNews].[@seasonId]">
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spInsertNews].[@id]">
+						<Property Name="IsOutput" Value="True" />
 						<Relationship Name="Type">
 							<Entry>
 								<Element Type="SqlTypeSpecifier">
@@ -2152,7 +2559,7 @@ RETURN 0]]></Value>
 					</Element>
 				</Entry>
 				<Entry>
-					<Element Type="SqlSubroutineParameter" Name="[dbo].[sp_InsertNews].[@divisionId]">
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spInsertNews].[@seasonId]">
 						<Relationship Name="Type">
 							<Entry>
 								<Element Type="SqlTypeSpecifier">
@@ -2167,7 +2574,7 @@ RETURN 0]]></Value>
 					</Element>
 				</Entry>
 				<Entry>
-					<Element Type="SqlSubroutineParameter" Name="[dbo].[sp_InsertNews].[@week]">
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spInsertNews].[@divisionId]">
 						<Relationship Name="Type">
 							<Entry>
 								<Element Type="SqlTypeSpecifier">
@@ -2182,7 +2589,7 @@ RETURN 0]]></Value>
 					</Element>
 				</Entry>
 				<Entry>
-					<Element Type="SqlSubroutineParameter" Name="[dbo].[sp_InsertNews].[@playerId]">
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spInsertNews].[@week]">
 						<Relationship Name="Type">
 							<Entry>
 								<Element Type="SqlTypeSpecifier">
@@ -2197,7 +2604,7 @@ RETURN 0]]></Value>
 					</Element>
 				</Entry>
 				<Entry>
-					<Element Type="SqlSubroutineParameter" Name="[dbo].[sp_InsertNews].[@teamId]">
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spInsertNews].[@playerId]">
 						<Relationship Name="Type">
 							<Entry>
 								<Element Type="SqlTypeSpecifier">
@@ -2212,7 +2619,22 @@ RETURN 0]]></Value>
 					</Element>
 				</Entry>
 				<Entry>
-					<Element Type="SqlSubroutineParameter" Name="[dbo].[sp_InsertNews].[@newsText]">
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spInsertNews].[@teamId]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spInsertNews].[@newsText]">
 						<Relationship Name="Type">
 							<Entry>
 								<Element Type="SqlTypeSpecifier">
@@ -2234,23 +2656,32 @@ RETURN 0]]></Value>
 				</Entry>
 			</Relationship>
 			<Annotation Type="SysCommentsObjectAnnotation">
-				<Property Name="Length" Value="321" />
+				<Property Name="Length" Value="474" />
 				<Property Name="StartLine" Value="1" />
 				<Property Name="StartColumn" Value="1" />
-				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[sp_InsertNews]&#xD;&#xA;&#x9;@seasonId int,&#xD;&#xA;&#x9;@divisionId int,&#xD;&#xA;&#x9;@week int,&#xD;&#xA;&#x9;@playerId int,&#xD;&#xA;&#x9;@teamId int,&#xD;&#xA;&#x9;@newsText nvarchar(max)&#xD;&#xA;AS" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spInsertNews]&#xD;&#xA;&#x9;@id int OUTPUT,&#xD;&#xA;&#x9;@seasonId int,&#xD;&#xA;&#x9;@divisionId int,&#xD;&#xA;&#x9;@week int,&#xD;&#xA;&#x9;@playerId int,&#xD;&#xA;&#x9;@teamId int,&#xD;&#xA;&#x9;@newsText nvarchar(max)&#xD;&#xA;AS" />
 			</Annotation>
 		</Element>
-		<Element Type="SqlProcedure" Name="[dbo].[sp_InsertPlayer]">
+		<Element Type="SqlProcedure" Name="[dbo].[spInsertPlayer]">
 			<Property Name="BodyScript">
 				<Value><![CDATA[
-	INSERT INTO [Player] ([Name], [Age], [Rating], [Position], [TeamId], [Value], [Retired], [InjuredWeeks])
-	VALUES (@name, @age, @rating, @position, @teamId, @value, @retired, @injuredWeeks)
+DECLARE @result int
+	INSERT INTO [Player] ([Name], [Age], [Rating], [Position], [TeamId], [Value], [Retired], [InjuredWeeks], [GameDetailsId])
+	VALUES (@name, @age, @rating, @position, @teamId, @value, @retired, @injuredWeeks, @gameDetailsId)
 
 	SET @id = SCOPE_IDENTITY()
-RETURN 0]]></Value>
+
+	IF @@ERROR = 0 
+     SET @result  = 1
+  ELSE SET @result = 0
+
+	RETURN @result]]></Value>
 			</Property>
 			<Property Name="IsAnsiNullsOn" Value="True" />
 			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
 				<Entry>
 					<References Name="[dbo].[Player]" />
 				</Entry>
@@ -2279,36 +2710,42 @@ RETURN 0]]></Value>
 					<References Name="[dbo].[Player].[InjuredWeeks]" />
 				</Entry>
 				<Entry>
-					<References Name="[dbo].[sp_InsertPlayer].[@name]" />
+					<References Name="[dbo].[Player].[GameDetailsId]" />
 				</Entry>
 				<Entry>
-					<References Name="[dbo].[sp_InsertPlayer].[@age]" />
+					<References Name="[dbo].[spInsertPlayer].[@name]" />
 				</Entry>
 				<Entry>
-					<References Name="[dbo].[sp_InsertPlayer].[@rating]" />
+					<References Name="[dbo].[spInsertPlayer].[@age]" />
 				</Entry>
 				<Entry>
-					<References Name="[dbo].[sp_InsertPlayer].[@position]" />
+					<References Name="[dbo].[spInsertPlayer].[@rating]" />
 				</Entry>
 				<Entry>
-					<References Name="[dbo].[sp_InsertPlayer].[@teamId]" />
+					<References Name="[dbo].[spInsertPlayer].[@position]" />
 				</Entry>
 				<Entry>
-					<References Name="[dbo].[sp_InsertPlayer].[@value]" />
+					<References Name="[dbo].[spInsertPlayer].[@teamId]" />
 				</Entry>
 				<Entry>
-					<References Name="[dbo].[sp_InsertPlayer].[@retired]" />
+					<References Name="[dbo].[spInsertPlayer].[@value]" />
 				</Entry>
 				<Entry>
-					<References Name="[dbo].[sp_InsertPlayer].[@injuredWeeks]" />
+					<References Name="[dbo].[spInsertPlayer].[@retired]" />
 				</Entry>
 				<Entry>
-					<References Name="[dbo].[sp_InsertPlayer].[@id]" />
+					<References Name="[dbo].[spInsertPlayer].[@injuredWeeks]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spInsertPlayer].[@gameDetailsId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spInsertPlayer].[@id]" />
 				</Entry>
 			</Relationship>
 			<Relationship Name="Parameters">
 				<Entry>
-					<Element Type="SqlSubroutineParameter" Name="[dbo].[sp_InsertPlayer].[@name]">
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spInsertPlayer].[@name]">
 						<Relationship Name="Type">
 							<Entry>
 								<Element Type="SqlTypeSpecifier">
@@ -2324,7 +2761,7 @@ RETURN 0]]></Value>
 					</Element>
 				</Entry>
 				<Entry>
-					<Element Type="SqlSubroutineParameter" Name="[dbo].[sp_InsertPlayer].[@rating]">
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spInsertPlayer].[@rating]">
 						<Relationship Name="Type">
 							<Entry>
 								<Element Type="SqlTypeSpecifier">
@@ -2339,7 +2776,7 @@ RETURN 0]]></Value>
 					</Element>
 				</Entry>
 				<Entry>
-					<Element Type="SqlSubroutineParameter" Name="[dbo].[sp_InsertPlayer].[@age]">
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spInsertPlayer].[@age]">
 						<Relationship Name="Type">
 							<Entry>
 								<Element Type="SqlTypeSpecifier">
@@ -2354,7 +2791,7 @@ RETURN 0]]></Value>
 					</Element>
 				</Entry>
 				<Entry>
-					<Element Type="SqlSubroutineParameter" Name="[dbo].[sp_InsertPlayer].[@position]">
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spInsertPlayer].[@position]">
 						<Relationship Name="Type">
 							<Entry>
 								<Element Type="SqlTypeSpecifier">
@@ -2369,7 +2806,7 @@ RETURN 0]]></Value>
 					</Element>
 				</Entry>
 				<Entry>
-					<Element Type="SqlSubroutineParameter" Name="[dbo].[sp_InsertPlayer].[@teamId]">
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spInsertPlayer].[@teamId]">
 						<Relationship Name="Type">
 							<Entry>
 								<Element Type="SqlTypeSpecifier">
@@ -2384,7 +2821,7 @@ RETURN 0]]></Value>
 					</Element>
 				</Entry>
 				<Entry>
-					<Element Type="SqlSubroutineParameter" Name="[dbo].[sp_InsertPlayer].[@value]">
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spInsertPlayer].[@value]">
 						<Relationship Name="Type">
 							<Entry>
 								<Element Type="SqlTypeSpecifier">
@@ -2399,7 +2836,7 @@ RETURN 0]]></Value>
 					</Element>
 				</Entry>
 				<Entry>
-					<Element Type="SqlSubroutineParameter" Name="[dbo].[sp_InsertPlayer].[@retired]">
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spInsertPlayer].[@retired]">
 						<Relationship Name="Type">
 							<Entry>
 								<Element Type="SqlTypeSpecifier">
@@ -2414,7 +2851,7 @@ RETURN 0]]></Value>
 					</Element>
 				</Entry>
 				<Entry>
-					<Element Type="SqlSubroutineParameter" Name="[dbo].[sp_InsertPlayer].[@injuredWeeks]">
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spInsertPlayer].[@injuredWeeks]">
 						<Relationship Name="Type">
 							<Entry>
 								<Element Type="SqlTypeSpecifier">
@@ -2429,7 +2866,22 @@ RETURN 0]]></Value>
 					</Element>
 				</Entry>
 				<Entry>
-					<Element Type="SqlSubroutineParameter" Name="[dbo].[sp_InsertPlayer].[@id]">
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spInsertPlayer].[@gameDetailsId]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spInsertPlayer].[@id]">
 						<Property Name="IsOutput" Value="True" />
 						<Relationship Name="Type">
 							<Entry>
@@ -2451,23 +2903,33 @@ RETURN 0]]></Value>
 				</Entry>
 			</Relationship>
 			<Annotation Type="SysCommentsObjectAnnotation">
-				<Property Name="Length" Value="427" />
+				<Property Name="Length" Value="578" />
 				<Property Name="StartLine" Value="1" />
 				<Property Name="StartColumn" Value="1" />
-				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[sp_InsertPlayer]&#xD;&#xA;&#x9;@name nvarchar(250),&#xD;&#xA;&#x9;@rating int,&#xD;&#xA;&#x9;@age int,&#xD;&#xA;&#x9;@position int,&#xD;&#xA;&#x9;@teamId int,&#xD;&#xA;&#x9;@value int,&#xD;&#xA;&#x9;@retired bit,&#xD;&#xA;&#x9;@injuredWeeks int,&#xD;&#xA;&#x9;@id int OUTPUT&#xD;&#xA;AS" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spInsertPlayer]&#xD;&#xA;&#x9;@name nvarchar(250),&#xD;&#xA;&#x9;@rating int,&#xD;&#xA;&#x9;@age int,&#xD;&#xA;&#x9;@position int,&#xD;&#xA;&#x9;@teamId int,&#xD;&#xA;&#x9;@value int,&#xD;&#xA;&#x9;@retired bit,&#xD;&#xA;&#x9;@injuredWeeks int,&#xD;&#xA;&#x9;@gameDetailsId int,&#xD;&#xA;&#x9;@id int OUTPUT&#xD;&#xA;AS" />
 			</Annotation>
 		</Element>
-		<Element Type="SqlProcedure" Name="[dbo].[sp_InsertPlayerAttributes]">
+		<Element Type="SqlProcedure" Name="[dbo].[spInsertPlayerAttributes]">
 			<Property Name="BodyScript">
 				<Value><![CDATA[
+DECLARE @result int
 	INSERT INTO [PlayerAttributes] ([Aggression], [Crossing], [Defending], [Form], [Handling], 
 				[Happinness], [Morale], [Passing], [PlayerId], [Shooting], [Skills], [Speed], [Stamina], [Strength], [Tackling])
 				VALUES (@aggression, @crossing, @defending, @form, @handling, @happinness, @morale, @passing, @playerId,
 						@shooting, @skills, @speed, @stamina, @strength, @tackling)
-RETURN 0]]></Value>
+SET @id = SCOPE_IDENTITY()
+
+	IF @@ERROR = 0 
+     SET @result  = 1
+  ELSE SET @result = 0
+
+	RETURN @result]]></Value>
 			</Property>
 			<Property Name="IsAnsiNullsOn" Value="True" />
 			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
 				<Entry>
 					<References Name="[dbo].[PlayerAttributes]" />
 				</Entry>
@@ -2517,54 +2979,57 @@ RETURN 0]]></Value>
 					<References Name="[dbo].[PlayerAttributes].[Tackling]" />
 				</Entry>
 				<Entry>
-					<References Name="[dbo].[sp_InsertPlayerAttributes].[@aggression]" />
+					<References Name="[dbo].[spInsertPlayerAttributes].[@aggression]" />
 				</Entry>
 				<Entry>
-					<References Name="[dbo].[sp_InsertPlayerAttributes].[@crossing]" />
+					<References Name="[dbo].[spInsertPlayerAttributes].[@crossing]" />
 				</Entry>
 				<Entry>
-					<References Name="[dbo].[sp_InsertPlayerAttributes].[@defending]" />
+					<References Name="[dbo].[spInsertPlayerAttributes].[@defending]" />
 				</Entry>
 				<Entry>
-					<References Name="[dbo].[sp_InsertPlayerAttributes].[@form]" />
+					<References Name="[dbo].[spInsertPlayerAttributes].[@form]" />
 				</Entry>
 				<Entry>
-					<References Name="[dbo].[sp_InsertPlayerAttributes].[@handling]" />
+					<References Name="[dbo].[spInsertPlayerAttributes].[@handling]" />
 				</Entry>
 				<Entry>
-					<References Name="[dbo].[sp_InsertPlayerAttributes].[@happinness]" />
+					<References Name="[dbo].[spInsertPlayerAttributes].[@happinness]" />
 				</Entry>
 				<Entry>
-					<References Name="[dbo].[sp_InsertPlayerAttributes].[@morale]" />
+					<References Name="[dbo].[spInsertPlayerAttributes].[@morale]" />
 				</Entry>
 				<Entry>
-					<References Name="[dbo].[sp_InsertPlayerAttributes].[@passing]" />
+					<References Name="[dbo].[spInsertPlayerAttributes].[@passing]" />
 				</Entry>
 				<Entry>
-					<References Name="[dbo].[sp_InsertPlayerAttributes].[@playerId]" />
+					<References Name="[dbo].[spInsertPlayerAttributes].[@playerId]" />
 				</Entry>
 				<Entry>
-					<References Name="[dbo].[sp_InsertPlayerAttributes].[@shooting]" />
+					<References Name="[dbo].[spInsertPlayerAttributes].[@shooting]" />
 				</Entry>
 				<Entry>
-					<References Name="[dbo].[sp_InsertPlayerAttributes].[@skills]" />
+					<References Name="[dbo].[spInsertPlayerAttributes].[@skills]" />
 				</Entry>
 				<Entry>
-					<References Name="[dbo].[sp_InsertPlayerAttributes].[@speed]" />
+					<References Name="[dbo].[spInsertPlayerAttributes].[@speed]" />
 				</Entry>
 				<Entry>
-					<References Name="[dbo].[sp_InsertPlayerAttributes].[@stamina]" />
+					<References Name="[dbo].[spInsertPlayerAttributes].[@stamina]" />
 				</Entry>
 				<Entry>
-					<References Name="[dbo].[sp_InsertPlayerAttributes].[@strength]" />
+					<References Name="[dbo].[spInsertPlayerAttributes].[@strength]" />
 				</Entry>
 				<Entry>
-					<References Name="[dbo].[sp_InsertPlayerAttributes].[@tackling]" />
+					<References Name="[dbo].[spInsertPlayerAttributes].[@tackling]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spInsertPlayerAttributes].[@id]" />
 				</Entry>
 			</Relationship>
 			<Relationship Name="Parameters">
 				<Entry>
-					<Element Type="SqlSubroutineParameter" Name="[dbo].[sp_InsertPlayerAttributes].[@playerId]">
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spInsertPlayerAttributes].[@playerId]">
 						<Relationship Name="Type">
 							<Entry>
 								<Element Type="SqlTypeSpecifier">
@@ -2579,7 +3044,7 @@ RETURN 0]]></Value>
 					</Element>
 				</Entry>
 				<Entry>
-					<Element Type="SqlSubroutineParameter" Name="[dbo].[sp_InsertPlayerAttributes].[@aggression]">
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spInsertPlayerAttributes].[@aggression]">
 						<Property Name="DefaultExpressionScript">
 							<Value><![CDATA[0]]></Value>
 						</Property>
@@ -2597,7 +3062,7 @@ RETURN 0]]></Value>
 					</Element>
 				</Entry>
 				<Entry>
-					<Element Type="SqlSubroutineParameter" Name="[dbo].[sp_InsertPlayerAttributes].[@crossing]">
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spInsertPlayerAttributes].[@crossing]">
 						<Property Name="DefaultExpressionScript">
 							<Value><![CDATA[0]]></Value>
 						</Property>
@@ -2615,7 +3080,7 @@ RETURN 0]]></Value>
 					</Element>
 				</Entry>
 				<Entry>
-					<Element Type="SqlSubroutineParameter" Name="[dbo].[sp_InsertPlayerAttributes].[@defending]">
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spInsertPlayerAttributes].[@defending]">
 						<Property Name="DefaultExpressionScript">
 							<Value><![CDATA[0]]></Value>
 						</Property>
@@ -2633,7 +3098,7 @@ RETURN 0]]></Value>
 					</Element>
 				</Entry>
 				<Entry>
-					<Element Type="SqlSubroutineParameter" Name="[dbo].[sp_InsertPlayerAttributes].[@form]">
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spInsertPlayerAttributes].[@form]">
 						<Property Name="DefaultExpressionScript">
 							<Value><![CDATA[0]]></Value>
 						</Property>
@@ -2651,7 +3116,7 @@ RETURN 0]]></Value>
 					</Element>
 				</Entry>
 				<Entry>
-					<Element Type="SqlSubroutineParameter" Name="[dbo].[sp_InsertPlayerAttributes].[@handling]">
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spInsertPlayerAttributes].[@handling]">
 						<Property Name="DefaultExpressionScript">
 							<Value><![CDATA[0]]></Value>
 						</Property>
@@ -2669,7 +3134,7 @@ RETURN 0]]></Value>
 					</Element>
 				</Entry>
 				<Entry>
-					<Element Type="SqlSubroutineParameter" Name="[dbo].[sp_InsertPlayerAttributes].[@happinness]">
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spInsertPlayerAttributes].[@happinness]">
 						<Property Name="DefaultExpressionScript">
 							<Value><![CDATA[0]]></Value>
 						</Property>
@@ -2687,7 +3152,7 @@ RETURN 0]]></Value>
 					</Element>
 				</Entry>
 				<Entry>
-					<Element Type="SqlSubroutineParameter" Name="[dbo].[sp_InsertPlayerAttributes].[@morale]">
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spInsertPlayerAttributes].[@morale]">
 						<Property Name="DefaultExpressionScript">
 							<Value><![CDATA[0]]></Value>
 						</Property>
@@ -2705,7 +3170,7 @@ RETURN 0]]></Value>
 					</Element>
 				</Entry>
 				<Entry>
-					<Element Type="SqlSubroutineParameter" Name="[dbo].[sp_InsertPlayerAttributes].[@passing]">
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spInsertPlayerAttributes].[@passing]">
 						<Property Name="DefaultExpressionScript">
 							<Value><![CDATA[0]]></Value>
 						</Property>
@@ -2723,7 +3188,7 @@ RETURN 0]]></Value>
 					</Element>
 				</Entry>
 				<Entry>
-					<Element Type="SqlSubroutineParameter" Name="[dbo].[sp_InsertPlayerAttributes].[@shooting]">
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spInsertPlayerAttributes].[@shooting]">
 						<Property Name="DefaultExpressionScript">
 							<Value><![CDATA[0]]></Value>
 						</Property>
@@ -2741,7 +3206,7 @@ RETURN 0]]></Value>
 					</Element>
 				</Entry>
 				<Entry>
-					<Element Type="SqlSubroutineParameter" Name="[dbo].[sp_InsertPlayerAttributes].[@skills]">
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spInsertPlayerAttributes].[@skills]">
 						<Property Name="DefaultExpressionScript">
 							<Value><![CDATA[0]]></Value>
 						</Property>
@@ -2759,7 +3224,7 @@ RETURN 0]]></Value>
 					</Element>
 				</Entry>
 				<Entry>
-					<Element Type="SqlSubroutineParameter" Name="[dbo].[sp_InsertPlayerAttributes].[@speed]">
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spInsertPlayerAttributes].[@speed]">
 						<Property Name="DefaultExpressionScript">
 							<Value><![CDATA[0]]></Value>
 						</Property>
@@ -2777,7 +3242,7 @@ RETURN 0]]></Value>
 					</Element>
 				</Entry>
 				<Entry>
-					<Element Type="SqlSubroutineParameter" Name="[dbo].[sp_InsertPlayerAttributes].[@stamina]">
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spInsertPlayerAttributes].[@stamina]">
 						<Property Name="DefaultExpressionScript">
 							<Value><![CDATA[0]]></Value>
 						</Property>
@@ -2795,7 +3260,7 @@ RETURN 0]]></Value>
 					</Element>
 				</Entry>
 				<Entry>
-					<Element Type="SqlSubroutineParameter" Name="[dbo].[sp_InsertPlayerAttributes].[@strength]">
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spInsertPlayerAttributes].[@strength]">
 						<Property Name="DefaultExpressionScript">
 							<Value><![CDATA[0]]></Value>
 						</Property>
@@ -2813,10 +3278,26 @@ RETURN 0]]></Value>
 					</Element>
 				</Entry>
 				<Entry>
-					<Element Type="SqlSubroutineParameter" Name="[dbo].[sp_InsertPlayerAttributes].[@tackling]">
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spInsertPlayerAttributes].[@tackling]">
 						<Property Name="DefaultExpressionScript">
 							<Value><![CDATA[0]]></Value>
 						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spInsertPlayerAttributes].[@id]">
+						<Property Name="IsOutput" Value="True" />
 						<Relationship Name="Type">
 							<Entry>
 								<Element Type="SqlTypeSpecifier">
@@ -2837,21 +3318,31 @@ RETURN 0]]></Value>
 				</Entry>
 			</Relationship>
 			<Annotation Type="SysCommentsObjectAnnotation">
-				<Property Name="Length" Value="755" />
+				<Property Name="Length" Value="898" />
 				<Property Name="StartLine" Value="1" />
 				<Property Name="StartColumn" Value="1" />
-				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[sp_InsertPlayerAttributes]&#xD;&#xA;&#x9;@playerId int,&#xD;&#xA;&#x9;@aggression int = 0,&#xD;&#xA;&#x9;@crossing int = 0,&#xD;&#xA;&#x9;@defending int = 0,&#xD;&#xA;&#x9;@form int = 0,&#xD;&#xA;&#x9;@handling int = 0,&#xD;&#xA;&#x9;@happinness int = 0,&#xD;&#xA;&#x9;@morale int = 0,&#xD;&#xA;&#x9;@passing int = 0,&#xD;&#xA;&#x9;@shooting int = 0,&#xD;&#xA;&#x9;@skills int = 0,&#xD;&#xA;&#x9;@speed int = 0,&#xD;&#xA;&#x9;@stamina int = 0,&#xD;&#xA;&#x9;@strength int = 0,&#xD;&#xA;&#x9;@tackling int = 0&#xD;&#xA;AS" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spInsertPlayerAttributes]&#xD;&#xA;&#x9;@playerId int,&#xD;&#xA;&#x9;@aggression int = 0,&#xD;&#xA;&#x9;@crossing int = 0,&#xD;&#xA;&#x9;@defending int = 0,&#xD;&#xA;&#x9;@form int = 0,&#xD;&#xA;&#x9;@handling int = 0,&#xD;&#xA;&#x9;@happinness int = 0,&#xD;&#xA;&#x9;@morale int = 0,&#xD;&#xA;&#x9;@passing int = 0,&#xD;&#xA;&#x9;@shooting int = 0,&#xD;&#xA;&#x9;@skills int = 0,&#xD;&#xA;&#x9;@speed int = 0,&#xD;&#xA;&#x9;@stamina int = 0,&#xD;&#xA;&#x9;@strength int = 0,&#xD;&#xA;&#x9;@tackling int = 0,&#xD;&#xA;&#x9;&#x9;@id int OUTPUT&#xD;&#xA;AS" />
 			</Annotation>
 		</Element>
-		<Element Type="SqlProcedure" Name="[dbo].[sp_InsertPlayerStats]">
+		<Element Type="SqlProcedure" Name="[dbo].[spInsertPlayerStats]">
 			<Property Name="BodyScript">
 				<Value><![CDATA[
+DECLARE @result int
 	INSERT INTO [PlayerStats] ([Assists], [CleanSheets], [Games], [Goals], [PlayerId])
 	VALUES (@assists, @cleanSheets, @games, @goals, @playerId)
-RETURN 0]]></Value>
+SET @id = SCOPE_IDENTITY()
+
+	IF @@ERROR = 0 
+     SET @result  = 1
+  ELSE SET @result = 0
+
+	RETURN @result]]></Value>
 			</Property>
 			<Property Name="IsAnsiNullsOn" Value="True" />
 			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
 				<Entry>
 					<References Name="[dbo].[PlayerStats]" />
 				</Entry>
@@ -2871,24 +3362,27 @@ RETURN 0]]></Value>
 					<References Name="[dbo].[PlayerStats].[PlayerId]" />
 				</Entry>
 				<Entry>
-					<References Name="[dbo].[sp_InsertPlayerStats].[@assists]" />
+					<References Name="[dbo].[spInsertPlayerStats].[@assists]" />
 				</Entry>
 				<Entry>
-					<References Name="[dbo].[sp_InsertPlayerStats].[@cleanSheets]" />
+					<References Name="[dbo].[spInsertPlayerStats].[@cleanSheets]" />
 				</Entry>
 				<Entry>
-					<References Name="[dbo].[sp_InsertPlayerStats].[@games]" />
+					<References Name="[dbo].[spInsertPlayerStats].[@games]" />
 				</Entry>
 				<Entry>
-					<References Name="[dbo].[sp_InsertPlayerStats].[@goals]" />
+					<References Name="[dbo].[spInsertPlayerStats].[@goals]" />
 				</Entry>
 				<Entry>
-					<References Name="[dbo].[sp_InsertPlayerStats].[@playerId]" />
+					<References Name="[dbo].[spInsertPlayerStats].[@playerId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spInsertPlayerStats].[@id]" />
 				</Entry>
 			</Relationship>
 			<Relationship Name="Parameters">
 				<Entry>
-					<Element Type="SqlSubroutineParameter" Name="[dbo].[sp_InsertPlayerStats].[@assists]">
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spInsertPlayerStats].[@assists]">
 						<Property Name="DefaultExpressionScript">
 							<Value><![CDATA[0]]></Value>
 						</Property>
@@ -2906,7 +3400,7 @@ RETURN 0]]></Value>
 					</Element>
 				</Entry>
 				<Entry>
-					<Element Type="SqlSubroutineParameter" Name="[dbo].[sp_InsertPlayerStats].[@cleanSheets]">
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spInsertPlayerStats].[@cleanSheets]">
 						<Property Name="DefaultExpressionScript">
 							<Value><![CDATA[0]]></Value>
 						</Property>
@@ -2924,7 +3418,7 @@ RETURN 0]]></Value>
 					</Element>
 				</Entry>
 				<Entry>
-					<Element Type="SqlSubroutineParameter" Name="[dbo].[sp_InsertPlayerStats].[@games]">
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spInsertPlayerStats].[@games]">
 						<Property Name="DefaultExpressionScript">
 							<Value><![CDATA[0]]></Value>
 						</Property>
@@ -2942,7 +3436,7 @@ RETURN 0]]></Value>
 					</Element>
 				</Entry>
 				<Entry>
-					<Element Type="SqlSubroutineParameter" Name="[dbo].[sp_InsertPlayerStats].[@goals]">
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spInsertPlayerStats].[@goals]">
 						<Property Name="DefaultExpressionScript">
 							<Value><![CDATA[0]]></Value>
 						</Property>
@@ -2960,7 +3454,23 @@ RETURN 0]]></Value>
 					</Element>
 				</Entry>
 				<Entry>
-					<Element Type="SqlSubroutineParameter" Name="[dbo].[sp_InsertPlayerStats].[@playerId]">
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spInsertPlayerStats].[@playerId]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spInsertPlayerStats].[@id]">
+						<Property Name="IsOutput" Value="True" />
 						<Relationship Name="Type">
 							<Entry>
 								<Element Type="SqlTypeSpecifier">
@@ -2981,93 +3491,62 @@ RETURN 0]]></Value>
 				</Entry>
 			</Relationship>
 			<Annotation Type="SysCommentsObjectAnnotation">
-				<Property Name="Length" Value="301" />
+				<Property Name="Length" Value="444" />
 				<Property Name="StartLine" Value="1" />
 				<Property Name="StartColumn" Value="1" />
-				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[sp_InsertPlayerStats]&#xD;&#xA;&#x9;@assists int = 0,&#xD;&#xA;&#x9;@cleanSheets int = 0,&#xD;&#xA;&#x9;@games int = 0,&#xD;&#xA;&#x9;@goals int = 0,&#xD;&#xA;&#x9;@playerId int&#xD;&#xA;AS" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spInsertPlayerStats]&#xD;&#xA;&#x9;@assists int = 0,&#xD;&#xA;&#x9;@cleanSheets int = 0,&#xD;&#xA;&#x9;@games int = 0,&#xD;&#xA;&#x9;@goals int = 0,&#xD;&#xA;&#x9;@playerId int,&#xD;&#xA;&#x9;&#x9;@id int OUTPUT&#xD;&#xA;AS" />
 			</Annotation>
 		</Element>
-		<Element Type="SqlProcedure" Name="[dbo].[sp_UpdatePlayer]">
+		<Element Type="SqlProcedure" Name="[dbo].[spInsertSeason]">
 			<Property Name="BodyScript">
 				<Value><![CDATA[
-	UPDATE [Player]
-	SET [Name] = @name,
-		[Rating] = @rating,
-		[Age] = @age,
-		[Position] = @position,
-		[TeamId] = @teamId,
-		[Value] = @value,
-		[Retired] = @retired,
-		[InjuredWeeks] = @injuredWeeks
-		WHERE [Id] = @id
-RETURN 0]]></Value>
+	DECLARE @result int
+
+	INSERT INTO [Season] ([GameDetailsId], [StartYear], [Completed])
+	VALUES (@gameDetailsId, @startYear, @completed)
+
+	SELECT @id = SCOPE_IDENTITY()
+
+	IF @@ERROR = 0 
+     SET @result  = 1
+  ELSE SET @result = 0
+
+RETURN @result]]></Value>
 			</Property>
 			<Property Name="IsAnsiNullsOn" Value="True" />
 			<Relationship Name="BodyDependencies">
 				<Entry>
-					<References Name="[dbo].[Player]" />
+					<References ExternalSource="BuiltIns" Name="[int]" />
 				</Entry>
 				<Entry>
-					<References Name="[dbo].[Player].[Name]" />
+					<References Name="[dbo].[Season]" />
 				</Entry>
 				<Entry>
-					<References Name="[dbo].[sp_UpdatePlayer].[@name]" />
+					<References Name="[dbo].[Season].[GameDetailsId]" />
 				</Entry>
 				<Entry>
-					<References Name="[dbo].[Player].[Rating]" />
+					<References Name="[dbo].[Season].[StartYear]" />
 				</Entry>
 				<Entry>
-					<References Name="[dbo].[sp_UpdatePlayer].[@rating]" />
+					<References Name="[dbo].[Season].[Completed]" />
 				</Entry>
 				<Entry>
-					<References Name="[dbo].[Player].[Age]" />
+					<References Name="[dbo].[spInsertSeason].[@gameDetailsId]" />
 				</Entry>
 				<Entry>
-					<References Name="[dbo].[sp_UpdatePlayer].[@age]" />
+					<References Name="[dbo].[spInsertSeason].[@startYear]" />
 				</Entry>
 				<Entry>
-					<References Name="[dbo].[Player].[Position]" />
+					<References Name="[dbo].[spInsertSeason].[@completed]" />
 				</Entry>
 				<Entry>
-					<References Name="[dbo].[sp_UpdatePlayer].[@position]" />
-				</Entry>
-				<Entry>
-					<References Name="[dbo].[Player].[TeamId]" />
-				</Entry>
-				<Entry>
-					<References Name="[dbo].[sp_UpdatePlayer].[@teamId]" />
-				</Entry>
-				<Entry>
-					<References Name="[dbo].[Player].[Value]" />
-				</Entry>
-				<Entry>
-					<References Name="[dbo].[sp_UpdatePlayer].[@value]" />
-				</Entry>
-				<Entry>
-					<References Name="[dbo].[Player].[Retired]" />
-				</Entry>
-				<Entry>
-					<References Name="[dbo].[sp_UpdatePlayer].[@retired]" />
-				</Entry>
-				<Entry>
-					<References Name="[dbo].[Player].[InjuredWeeks]" />
-				</Entry>
-				<Entry>
-					<References Name="[dbo].[sp_UpdatePlayer].[@injuredWeeks]" />
-				</Entry>
-				<Entry>
-					<References Name="[dbo].[Player].[Id]" />
-				</Entry>
-				<Entry>
-					<References Name="[dbo].[sp_UpdatePlayer].[@id]" />
+					<References Name="[dbo].[spInsertSeason].[@id]" />
 				</Entry>
 			</Relationship>
 			<Relationship Name="Parameters">
 				<Entry>
-					<Element Type="SqlSubroutineParameter" Name="[dbo].[sp_UpdatePlayer].[@id]">
-						<Property Name="DefaultExpressionScript">
-							<Value><![CDATA[0]]></Value>
-						</Property>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spInsertSeason].[@id]">
+						<Property Name="IsOutput" Value="True" />
 						<Relationship Name="Type">
 							<Entry>
 								<Element Type="SqlTypeSpecifier">
@@ -3082,7 +3561,132 @@ RETURN 0]]></Value>
 					</Element>
 				</Entry>
 				<Entry>
-					<Element Type="SqlSubroutineParameter" Name="[dbo].[sp_UpdatePlayer].[@name]">
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spInsertSeason].[@gameDetailsId]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spInsertSeason].[@startYear]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spInsertSeason].[@completed]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[0]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[bit]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="383" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spInsertSeason]&#xD;&#xA;&#x9;@id int OUTPUT,&#xD;&#xA;&#x9;@gameDetailsId int ,&#xD;&#xA;&#x9;@startYear int,&#xD;&#xA;&#x9;@completed bit = 0&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[spInsertTeam]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+DECLARE @result int
+	INSERT INTO [Team] ([Cash], [DivisionId], [Name], [StadiumCapacity], [YearFormed], [GameDetailsId])
+	VALUES (@cash, @divisionId, @name, @stadiumCapacity, @yearFormed, @gameDetailsId)
+
+	SET @id = SCOPE_IDENTITY()
+
+	IF @@ERROR = 0 
+     SET @result  = 1
+  ELSE SET @result = 0
+
+	RETURN @result]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Team]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Team].[Cash]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Team].[DivisionId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Team].[Name]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Team].[StadiumCapacity]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Team].[YearFormed]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Team].[GameDetailsId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spInsertTeam].[@cash]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spInsertTeam].[@divisionId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spInsertTeam].[@name]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spInsertTeam].[@stadiumCapacity]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spInsertTeam].[@yearFormed]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spInsertTeam].[@gameDetailsId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spInsertTeam].[@id]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spInsertTeam].[@name]">
 						<Relationship Name="Type">
 							<Entry>
 								<Element Type="SqlTypeSpecifier">
@@ -3098,7 +3702,7 @@ RETURN 0]]></Value>
 					</Element>
 				</Entry>
 				<Entry>
-					<Element Type="SqlSubroutineParameter" Name="[dbo].[sp_UpdatePlayer].[@rating]">
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spInsertTeam].[@divisionId]">
 						<Relationship Name="Type">
 							<Entry>
 								<Element Type="SqlTypeSpecifier">
@@ -3113,7 +3717,7 @@ RETURN 0]]></Value>
 					</Element>
 				</Entry>
 				<Entry>
-					<Element Type="SqlSubroutineParameter" Name="[dbo].[sp_UpdatePlayer].[@age]">
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spInsertTeam].[@cash]">
 						<Relationship Name="Type">
 							<Entry>
 								<Element Type="SqlTypeSpecifier">
@@ -3128,7 +3732,7 @@ RETURN 0]]></Value>
 					</Element>
 				</Entry>
 				<Entry>
-					<Element Type="SqlSubroutineParameter" Name="[dbo].[sp_UpdatePlayer].[@position]">
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spInsertTeam].[@stadiumCapacity]">
 						<Relationship Name="Type">
 							<Entry>
 								<Element Type="SqlTypeSpecifier">
@@ -3143,7 +3747,7 @@ RETURN 0]]></Value>
 					</Element>
 				</Entry>
 				<Entry>
-					<Element Type="SqlSubroutineParameter" Name="[dbo].[sp_UpdatePlayer].[@teamId]">
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spInsertTeam].[@yearFormed]">
 						<Relationship Name="Type">
 							<Entry>
 								<Element Type="SqlTypeSpecifier">
@@ -3158,7 +3762,7 @@ RETURN 0]]></Value>
 					</Element>
 				</Entry>
 				<Entry>
-					<Element Type="SqlSubroutineParameter" Name="[dbo].[sp_UpdatePlayer].[@value]">
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spInsertTeam].[@gameDetailsId]">
 						<Relationship Name="Type">
 							<Entry>
 								<Element Type="SqlTypeSpecifier">
@@ -3173,22 +3777,8 @@ RETURN 0]]></Value>
 					</Element>
 				</Entry>
 				<Entry>
-					<Element Type="SqlSubroutineParameter" Name="[dbo].[sp_UpdatePlayer].[@retired]">
-						<Relationship Name="Type">
-							<Entry>
-								<Element Type="SqlTypeSpecifier">
-									<Relationship Name="Type">
-										<Entry>
-											<References ExternalSource="BuiltIns" Name="[bit]" />
-										</Entry>
-									</Relationship>
-								</Element>
-							</Entry>
-						</Relationship>
-					</Element>
-				</Entry>
-				<Entry>
-					<Element Type="SqlSubroutineParameter" Name="[dbo].[sp_UpdatePlayer].[@injuredWeeks]">
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spInsertTeam].[@id]">
+						<Property Name="IsOutput" Value="True" />
 						<Relationship Name="Type">
 							<Entry>
 								<Element Type="SqlTypeSpecifier">
@@ -3209,15 +3799,440 @@ RETURN 0]]></Value>
 				</Entry>
 			</Relationship>
 			<Annotation Type="SysCommentsObjectAnnotation">
-				<Property Name="Length" Value="431" />
+				<Property Name="Length" Value="503" />
 				<Property Name="StartLine" Value="1" />
 				<Property Name="StartColumn" Value="1" />
-				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[sp_UpdatePlayer]&#xD;&#xA;&#x9;@id int = 0,&#xD;&#xA;&#x9;@name nvarchar(250),&#xD;&#xA;&#x9;@rating int,&#xD;&#xA;&#x9;@age int,&#xD;&#xA;&#x9;@position int,&#xD;&#xA;&#x9;@teamId int,&#xD;&#xA;&#x9;@value int,&#xD;&#xA;&#x9;@retired bit,&#xD;&#xA;&#x9;@injuredWeeks int&#xD;&#xA;AS" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spInsertTeam]&#xD;&#xA;&#xD;&#xA;@name nvarchar(250),&#xD;&#xA;&#x9;@divisionId int,&#xD;&#xA;&#x9;@cash int,&#xD;&#xA;&#x9;@stadiumCapacity int,&#xD;&#xA;&#x9;@yearFormed int,&#xD;&#xA;&#x9;@gameDetailsId int,&#xD;&#xA;&#x9;@id int OUTPUT&#xD;&#xA;AS" />
 			</Annotation>
 		</Element>
-		<Element Type="SqlProcedure" Name="[dbo].[sp_UpdatePlayerAttributes]">
+		<Element Type="SqlProcedure" Name="[dbo].[spRetirePlayer]">
 			<Property Name="BodyScript">
 				<Value><![CDATA[
+	UPDATE [Player] SET [Retired] = 1 WHERE [Id] = @id
+RETURN 0]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Player]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Player].[Retired]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Player].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spRetirePlayer].[@id]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spRetirePlayer].[@id]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="116" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spRetirePlayer]&#xD;&#xA;&#x9;@id int&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[spUpdateGameDetails]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+	UPDATE [GameDetails] 
+	SET [CurrentSeasonid] = @currentSeasonId,
+		[CurrentWeek] = @currentWeek,
+		[ManagerName] = @managerName,
+		[TeamId] = @teamId
+	WHERE [Id] = @id
+RETURN 0]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[GameDetails]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[GameDetails].[CurrentSeasonId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spUpdateGameDetails].[@currentSeasonId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[GameDetails].[CurrentWeek]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spUpdateGameDetails].[@currentWeek]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[GameDetails].[ManagerName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spUpdateGameDetails].[@managerName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[GameDetails].[TeamId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spUpdateGameDetails].[@teamId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[GameDetails].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spUpdateGameDetails].[@id]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUpdateGameDetails].[@id]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUpdateGameDetails].[@currentSeasonId]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUpdateGameDetails].[@currentWeek]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUpdateGameDetails].[@managerName]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="250" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUpdateGameDetails].[@teamId]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="332" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spUpdateGameDetails]&#xD;&#xA;&#x9;@id int,&#xD;&#xA;&#x9;@currentSeasonId int,&#xD;&#xA;&#x9;@currentWeek int,&#xD;&#xA;&#x9;@managerName nvarchar(250),&#xD;&#xA;&#x9;@teamId int&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[spUpdatePlayer]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+DECLARE @result int
+
+	UPDATE [Player]
+	SET [Name] = @name,
+		[Rating] = @rating,
+		[Age] = @age,
+		[Position] = @position,
+		[TeamId] = @teamId,
+		[Value] = @value,
+		[Retired] = @retired,
+		[InjuredWeeks] = @injuredWeeks
+		WHERE [Id] = @id
+	IF @@ERROR = 0 
+     SET @result  = 1
+  ELSE SET @result = 0
+
+	RETURN @result]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Player]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Player].[Name]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spUpdatePlayer].[@name]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Player].[Rating]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spUpdatePlayer].[@rating]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Player].[Age]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spUpdatePlayer].[@age]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Player].[Position]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spUpdatePlayer].[@position]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Player].[TeamId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spUpdatePlayer].[@teamId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Player].[Value]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spUpdatePlayer].[@value]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Player].[Retired]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spUpdatePlayer].[@retired]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Player].[InjuredWeeks]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spUpdatePlayer].[@injuredWeeks]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Player].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spUpdatePlayer].[@id]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUpdatePlayer].[@id]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[0]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUpdatePlayer].[@name]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="250" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUpdatePlayer].[@rating]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUpdatePlayer].[@age]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUpdatePlayer].[@position]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUpdatePlayer].[@teamId]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUpdatePlayer].[@value]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUpdatePlayer].[@retired]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[bit]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUpdatePlayer].[@injuredWeeks]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="527" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spUpdatePlayer]&#xD;&#xA;&#x9;@id int = 0,&#xD;&#xA;&#x9;@name nvarchar(250),&#xD;&#xA;&#x9;@rating int,&#xD;&#xA;&#x9;@age int,&#xD;&#xA;&#x9;@position int,&#xD;&#xA;&#x9;@teamId int,&#xD;&#xA;&#x9;@value int,&#xD;&#xA;&#x9;@retired bit,&#xD;&#xA;&#x9;@injuredWeeks int&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[spUpdatePlayerAttributes]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+DECLARE @result int
 	UPDATE [PlayerAttributes]  SET 
 	[Aggression] = @aggression, 
 	[Crossing] = @crossing, 
@@ -3234,10 +4249,18 @@ RETURN 0]]></Value>
 	[Strength] = @strength, 
 	[Tackling] = @tackling
 	WHERE [PlayerId] = @playerId
-RETURN 0]]></Value>
+
+		IF @@ERROR = 0 
+     SET @result  = 1
+  ELSE SET @result = 0
+
+	RETURN @result]]></Value>
 			</Property>
 			<Property Name="IsAnsiNullsOn" Value="True" />
 			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
 				<Entry>
 					<References Name="[dbo].[PlayerAttributes]" />
 				</Entry>
@@ -3245,96 +4268,96 @@ RETURN 0]]></Value>
 					<References Name="[dbo].[PlayerAttributes].[Aggression]" />
 				</Entry>
 				<Entry>
-					<References Name="[dbo].[sp_UpdatePlayerAttributes].[@aggression]" />
+					<References Name="[dbo].[spUpdatePlayerAttributes].[@aggression]" />
 				</Entry>
 				<Entry>
 					<References Name="[dbo].[PlayerAttributes].[Crossing]" />
 				</Entry>
 				<Entry>
-					<References Name="[dbo].[sp_UpdatePlayerAttributes].[@crossing]" />
+					<References Name="[dbo].[spUpdatePlayerAttributes].[@crossing]" />
 				</Entry>
 				<Entry>
 					<References Name="[dbo].[PlayerAttributes].[Defending]" />
 				</Entry>
 				<Entry>
-					<References Name="[dbo].[sp_UpdatePlayerAttributes].[@defending]" />
+					<References Name="[dbo].[spUpdatePlayerAttributes].[@defending]" />
 				</Entry>
 				<Entry>
 					<References Name="[dbo].[PlayerAttributes].[Form]" />
 				</Entry>
 				<Entry>
-					<References Name="[dbo].[sp_UpdatePlayerAttributes].[@form]" />
+					<References Name="[dbo].[spUpdatePlayerAttributes].[@form]" />
 				</Entry>
 				<Entry>
 					<References Name="[dbo].[PlayerAttributes].[Handling]" />
 				</Entry>
 				<Entry>
-					<References Name="[dbo].[sp_UpdatePlayerAttributes].[@handling]" />
+					<References Name="[dbo].[spUpdatePlayerAttributes].[@handling]" />
 				</Entry>
 				<Entry>
 					<References Name="[dbo].[PlayerAttributes].[Happinness]" />
 				</Entry>
 				<Entry>
-					<References Name="[dbo].[sp_UpdatePlayerAttributes].[@happinness]" />
+					<References Name="[dbo].[spUpdatePlayerAttributes].[@happinness]" />
 				</Entry>
 				<Entry>
 					<References Name="[dbo].[PlayerAttributes].[Morale]" />
 				</Entry>
 				<Entry>
-					<References Name="[dbo].[sp_UpdatePlayerAttributes].[@morale]" />
+					<References Name="[dbo].[spUpdatePlayerAttributes].[@morale]" />
 				</Entry>
 				<Entry>
 					<References Name="[dbo].[PlayerAttributes].[Passing]" />
 				</Entry>
 				<Entry>
-					<References Name="[dbo].[sp_UpdatePlayerAttributes].[@passing]" />
+					<References Name="[dbo].[spUpdatePlayerAttributes].[@passing]" />
 				</Entry>
 				<Entry>
 					<References Name="[dbo].[PlayerAttributes].[Shooting]" />
 				</Entry>
 				<Entry>
-					<References Name="[dbo].[sp_UpdatePlayerAttributes].[@shooting]" />
+					<References Name="[dbo].[spUpdatePlayerAttributes].[@shooting]" />
 				</Entry>
 				<Entry>
 					<References Name="[dbo].[PlayerAttributes].[Skills]" />
 				</Entry>
 				<Entry>
-					<References Name="[dbo].[sp_UpdatePlayerAttributes].[@skills]" />
+					<References Name="[dbo].[spUpdatePlayerAttributes].[@skills]" />
 				</Entry>
 				<Entry>
 					<References Name="[dbo].[PlayerAttributes].[Speed]" />
 				</Entry>
 				<Entry>
-					<References Name="[dbo].[sp_UpdatePlayerAttributes].[@speed]" />
+					<References Name="[dbo].[spUpdatePlayerAttributes].[@speed]" />
 				</Entry>
 				<Entry>
 					<References Name="[dbo].[PlayerAttributes].[Stamina]" />
 				</Entry>
 				<Entry>
-					<References Name="[dbo].[sp_UpdatePlayerAttributes].[@stamina]" />
+					<References Name="[dbo].[spUpdatePlayerAttributes].[@stamina]" />
 				</Entry>
 				<Entry>
 					<References Name="[dbo].[PlayerAttributes].[Strength]" />
 				</Entry>
 				<Entry>
-					<References Name="[dbo].[sp_UpdatePlayerAttributes].[@strength]" />
+					<References Name="[dbo].[spUpdatePlayerAttributes].[@strength]" />
 				</Entry>
 				<Entry>
 					<References Name="[dbo].[PlayerAttributes].[Tackling]" />
 				</Entry>
 				<Entry>
-					<References Name="[dbo].[sp_UpdatePlayerAttributes].[@tackling]" />
+					<References Name="[dbo].[spUpdatePlayerAttributes].[@tackling]" />
 				</Entry>
 				<Entry>
 					<References Name="[dbo].[PlayerAttributes].[PlayerId]" />
 				</Entry>
 				<Entry>
-					<References Name="[dbo].[sp_UpdatePlayerAttributes].[@playerId]" />
+					<References Name="[dbo].[spUpdatePlayerAttributes].[@playerId]" />
 				</Entry>
 			</Relationship>
 			<Relationship Name="Parameters">
 				<Entry>
-					<Element Type="SqlSubroutineParameter" Name="[dbo].[sp_UpdatePlayerAttributes].[@playerId]">
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUpdatePlayerAttributes].[@playerId]">
 						<Relationship Name="Type">
 							<Entry>
 								<Element Type="SqlTypeSpecifier">
@@ -3349,7 +4372,7 @@ RETURN 0]]></Value>
 					</Element>
 				</Entry>
 				<Entry>
-					<Element Type="SqlSubroutineParameter" Name="[dbo].[sp_UpdatePlayerAttributes].[@aggression]">
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUpdatePlayerAttributes].[@aggression]">
 						<Relationship Name="Type">
 							<Entry>
 								<Element Type="SqlTypeSpecifier">
@@ -3364,7 +4387,7 @@ RETURN 0]]></Value>
 					</Element>
 				</Entry>
 				<Entry>
-					<Element Type="SqlSubroutineParameter" Name="[dbo].[sp_UpdatePlayerAttributes].[@crossing]">
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUpdatePlayerAttributes].[@crossing]">
 						<Relationship Name="Type">
 							<Entry>
 								<Element Type="SqlTypeSpecifier">
@@ -3379,7 +4402,7 @@ RETURN 0]]></Value>
 					</Element>
 				</Entry>
 				<Entry>
-					<Element Type="SqlSubroutineParameter" Name="[dbo].[sp_UpdatePlayerAttributes].[@defending]">
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUpdatePlayerAttributes].[@defending]">
 						<Relationship Name="Type">
 							<Entry>
 								<Element Type="SqlTypeSpecifier">
@@ -3394,7 +4417,7 @@ RETURN 0]]></Value>
 					</Element>
 				</Entry>
 				<Entry>
-					<Element Type="SqlSubroutineParameter" Name="[dbo].[sp_UpdatePlayerAttributes].[@form]">
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUpdatePlayerAttributes].[@form]">
 						<Relationship Name="Type">
 							<Entry>
 								<Element Type="SqlTypeSpecifier">
@@ -3409,7 +4432,7 @@ RETURN 0]]></Value>
 					</Element>
 				</Entry>
 				<Entry>
-					<Element Type="SqlSubroutineParameter" Name="[dbo].[sp_UpdatePlayerAttributes].[@handling]">
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUpdatePlayerAttributes].[@handling]">
 						<Relationship Name="Type">
 							<Entry>
 								<Element Type="SqlTypeSpecifier">
@@ -3424,7 +4447,7 @@ RETURN 0]]></Value>
 					</Element>
 				</Entry>
 				<Entry>
-					<Element Type="SqlSubroutineParameter" Name="[dbo].[sp_UpdatePlayerAttributes].[@happinness]">
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUpdatePlayerAttributes].[@happinness]">
 						<Relationship Name="Type">
 							<Entry>
 								<Element Type="SqlTypeSpecifier">
@@ -3439,7 +4462,7 @@ RETURN 0]]></Value>
 					</Element>
 				</Entry>
 				<Entry>
-					<Element Type="SqlSubroutineParameter" Name="[dbo].[sp_UpdatePlayerAttributes].[@morale]">
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUpdatePlayerAttributes].[@morale]">
 						<Relationship Name="Type">
 							<Entry>
 								<Element Type="SqlTypeSpecifier">
@@ -3454,7 +4477,7 @@ RETURN 0]]></Value>
 					</Element>
 				</Entry>
 				<Entry>
-					<Element Type="SqlSubroutineParameter" Name="[dbo].[sp_UpdatePlayerAttributes].[@passing]">
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUpdatePlayerAttributes].[@passing]">
 						<Relationship Name="Type">
 							<Entry>
 								<Element Type="SqlTypeSpecifier">
@@ -3469,7 +4492,7 @@ RETURN 0]]></Value>
 					</Element>
 				</Entry>
 				<Entry>
-					<Element Type="SqlSubroutineParameter" Name="[dbo].[sp_UpdatePlayerAttributes].[@shooting]">
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUpdatePlayerAttributes].[@shooting]">
 						<Property Name="DefaultExpressionScript">
 							<Value><![CDATA[0]]></Value>
 						</Property>
@@ -3487,7 +4510,7 @@ RETURN 0]]></Value>
 					</Element>
 				</Entry>
 				<Entry>
-					<Element Type="SqlSubroutineParameter" Name="[dbo].[sp_UpdatePlayerAttributes].[@skills]">
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUpdatePlayerAttributes].[@skills]">
 						<Relationship Name="Type">
 							<Entry>
 								<Element Type="SqlTypeSpecifier">
@@ -3502,7 +4525,7 @@ RETURN 0]]></Value>
 					</Element>
 				</Entry>
 				<Entry>
-					<Element Type="SqlSubroutineParameter" Name="[dbo].[sp_UpdatePlayerAttributes].[@speed]">
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUpdatePlayerAttributes].[@speed]">
 						<Relationship Name="Type">
 							<Entry>
 								<Element Type="SqlTypeSpecifier">
@@ -3517,7 +4540,7 @@ RETURN 0]]></Value>
 					</Element>
 				</Entry>
 				<Entry>
-					<Element Type="SqlSubroutineParameter" Name="[dbo].[sp_UpdatePlayerAttributes].[@stamina]">
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUpdatePlayerAttributes].[@stamina]">
 						<Relationship Name="Type">
 							<Entry>
 								<Element Type="SqlTypeSpecifier">
@@ -3532,7 +4555,7 @@ RETURN 0]]></Value>
 					</Element>
 				</Entry>
 				<Entry>
-					<Element Type="SqlSubroutineParameter" Name="[dbo].[sp_UpdatePlayerAttributes].[@strength]">
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUpdatePlayerAttributes].[@strength]">
 						<Relationship Name="Type">
 							<Entry>
 								<Element Type="SqlTypeSpecifier">
@@ -3547,7 +4570,7 @@ RETURN 0]]></Value>
 					</Element>
 				</Entry>
 				<Entry>
-					<Element Type="SqlSubroutineParameter" Name="[dbo].[sp_UpdatePlayerAttributes].[@tackling]">
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUpdatePlayerAttributes].[@tackling]">
 						<Relationship Name="Type">
 							<Entry>
 								<Element Type="SqlTypeSpecifier">
@@ -3568,25 +4591,35 @@ RETURN 0]]></Value>
 				</Entry>
 			</Relationship>
 			<Annotation Type="SysCommentsObjectAnnotation">
-				<Property Name="Length" Value="738" />
+				<Property Name="Length" Value="835" />
 				<Property Name="StartLine" Value="1" />
 				<Property Name="StartColumn" Value="1" />
-				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[sp_UpdatePlayerAttributes]&#xD;&#xA;&#x9;@playerId int,&#xD;&#xA;&#x9;@aggression int,&#xD;&#xA;&#x9;@crossing int,&#xD;&#xA;&#x9;@defending int,&#xD;&#xA;&#x9;@form int,&#xD;&#xA;&#x9;@handling int,&#xD;&#xA;&#x9;@happinness int,&#xD;&#xA;&#x9;@morale int,&#xD;&#xA;&#x9;@passing int,&#xD;&#xA;&#x9;@shooting int = 0,&#xD;&#xA;&#x9;@skills int,&#xD;&#xA;&#x9;@speed int,&#xD;&#xA;&#x9;@stamina int,&#xD;&#xA;&#x9;@strength int,&#xD;&#xA;&#x9;@tackling int&#xD;&#xA;AS" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spUpdatePlayerAttributes]&#xD;&#xA;&#x9;@playerId int,&#xD;&#xA;&#x9;@aggression int,&#xD;&#xA;&#x9;@crossing int,&#xD;&#xA;&#x9;@defending int,&#xD;&#xA;&#x9;@form int,&#xD;&#xA;&#x9;@handling int,&#xD;&#xA;&#x9;@happinness int,&#xD;&#xA;&#x9;@morale int,&#xD;&#xA;&#x9;@passing int,&#xD;&#xA;&#x9;@shooting int = 0,&#xD;&#xA;&#x9;@skills int,&#xD;&#xA;&#x9;@speed int,&#xD;&#xA;&#x9;@stamina int,&#xD;&#xA;&#x9;@strength int,&#xD;&#xA;&#x9;@tackling int&#xD;&#xA;AS" />
 			</Annotation>
 		</Element>
-		<Element Type="SqlProcedure" Name="[dbo].[sp_UpdatePlayerStats]">
+		<Element Type="SqlProcedure" Name="[dbo].[spUpdatePlayerStats]">
 			<Property Name="BodyScript">
 				<Value><![CDATA[
+	DECLARE @result int
+
 	UPDATE [PlayerStats] SET 
 	[Assists] = @assists, 
 	[CleanSheets] = @cleanSheets, 
 	[Games] = @games, 
 	[Goals] = @goals 
 	WHERE [PlayerId] = @playerId
-RETURN 0]]></Value>
+
+	IF @@ERROR = 0 
+     SET @result  = 1
+  ELSE SET @result = 0
+
+	RETURN @result]]></Value>
 			</Property>
 			<Property Name="IsAnsiNullsOn" Value="True" />
 			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
 				<Entry>
 					<References Name="[dbo].[PlayerStats]" />
 				</Entry>
@@ -3594,36 +4627,36 @@ RETURN 0]]></Value>
 					<References Name="[dbo].[PlayerStats].[Assists]" />
 				</Entry>
 				<Entry>
-					<References Name="[dbo].[sp_UpdatePlayerStats].[@assists]" />
+					<References Name="[dbo].[spUpdatePlayerStats].[@assists]" />
 				</Entry>
 				<Entry>
 					<References Name="[dbo].[PlayerStats].[CleanSheets]" />
 				</Entry>
 				<Entry>
-					<References Name="[dbo].[sp_UpdatePlayerStats].[@cleanSheets]" />
+					<References Name="[dbo].[spUpdatePlayerStats].[@cleanSheets]" />
 				</Entry>
 				<Entry>
 					<References Name="[dbo].[PlayerStats].[Games]" />
 				</Entry>
 				<Entry>
-					<References Name="[dbo].[sp_UpdatePlayerStats].[@games]" />
+					<References Name="[dbo].[spUpdatePlayerStats].[@games]" />
 				</Entry>
 				<Entry>
 					<References Name="[dbo].[PlayerStats].[Goals]" />
 				</Entry>
 				<Entry>
-					<References Name="[dbo].[sp_UpdatePlayerStats].[@goals]" />
+					<References Name="[dbo].[spUpdatePlayerStats].[@goals]" />
 				</Entry>
 				<Entry>
 					<References Name="[dbo].[PlayerStats].[PlayerId]" />
 				</Entry>
 				<Entry>
-					<References Name="[dbo].[sp_UpdatePlayerStats].[@playerId]" />
+					<References Name="[dbo].[spUpdatePlayerStats].[@playerId]" />
 				</Entry>
 			</Relationship>
 			<Relationship Name="Parameters">
 				<Entry>
-					<Element Type="SqlSubroutineParameter" Name="[dbo].[sp_UpdatePlayerStats].[@assists]">
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUpdatePlayerStats].[@assists]">
 						<Relationship Name="Type">
 							<Entry>
 								<Element Type="SqlTypeSpecifier">
@@ -3638,7 +4671,7 @@ RETURN 0]]></Value>
 					</Element>
 				</Entry>
 				<Entry>
-					<Element Type="SqlSubroutineParameter" Name="[dbo].[sp_UpdatePlayerStats].[@cleanSheets]">
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUpdatePlayerStats].[@cleanSheets]">
 						<Relationship Name="Type">
 							<Entry>
 								<Element Type="SqlTypeSpecifier">
@@ -3653,7 +4686,7 @@ RETURN 0]]></Value>
 					</Element>
 				</Entry>
 				<Entry>
-					<Element Type="SqlSubroutineParameter" Name="[dbo].[sp_UpdatePlayerStats].[@games]">
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUpdatePlayerStats].[@games]">
 						<Relationship Name="Type">
 							<Entry>
 								<Element Type="SqlTypeSpecifier">
@@ -3668,7 +4701,7 @@ RETURN 0]]></Value>
 					</Element>
 				</Entry>
 				<Entry>
-					<Element Type="SqlSubroutineParameter" Name="[dbo].[sp_UpdatePlayerStats].[@goals]">
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUpdatePlayerStats].[@goals]">
 						<Relationship Name="Type">
 							<Entry>
 								<Element Type="SqlTypeSpecifier">
@@ -3683,7 +4716,7 @@ RETURN 0]]></Value>
 					</Element>
 				</Entry>
 				<Entry>
-					<Element Type="SqlSubroutineParameter" Name="[dbo].[sp_UpdatePlayerStats].[@playerId]">
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUpdatePlayerStats].[@playerId]">
 						<Relationship Name="Type">
 							<Entry>
 								<Element Type="SqlTypeSpecifier">
@@ -3704,20 +4737,136 @@ RETURN 0]]></Value>
 				</Entry>
 			</Relationship>
 			<Annotation Type="SysCommentsObjectAnnotation">
-				<Property Name="Length" Value="297" />
+				<Property Name="Length" Value="396" />
 				<Property Name="StartLine" Value="1" />
 				<Property Name="StartColumn" Value="1" />
-				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[sp_UpdatePlayerStats]&#xD;&#xA;&#x9;@assists int,&#xD;&#xA;&#x9;@cleanSheets int,&#xD;&#xA;&#x9;@games int,&#xD;&#xA;&#x9;@goals int,&#xD;&#xA;&#x9;@playerId int&#xD;&#xA;AS" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spUpdatePlayerStats]&#xD;&#xA;&#x9;@assists int,&#xD;&#xA;&#x9;@cleanSheets int,&#xD;&#xA;&#x9;@games int,&#xD;&#xA;&#x9;@goals int,&#xD;&#xA;&#x9;@playerId int&#xD;&#xA;AS" />
 			</Annotation>
 		</Element>
-		<Element Type="SqlProcedure" Name="[dbo].[sp_UpdateTeam]">
+		<Element Type="SqlProcedure" Name="[dbo].[spUpdateSeason]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+	UPDATE [Season]
+	SET [GameDetailsId] = @gameDetailsId,
+		[StartYear] = @startYear,
+		[Completed] = @completed
+	WHERE [Id] = @id
+RETURN 0]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Season]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Season].[GameDetailsId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spUpdateSeason].[@gameDetailsId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Season].[StartYear]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spUpdateSeason].[@startYear]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Season].[Completed]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spUpdateSeason].[@completed]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Season].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spUpdateSeason].[@id]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUpdateSeason].[@id]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUpdateSeason].[@gameDetailsId]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUpdateSeason].[@startYear]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUpdateSeason].[@completed]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[bit]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="255" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spUpdateSeason]&#xD;&#xA;&#x9;@id int,&#xD;&#xA;&#x9;@gameDetailsId int,&#xD;&#xA;&#x9;@startYear int,&#xD;&#xA;&#x9;@completed bit&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[spUpdateTeam]">
 			<Property Name="BodyScript">
 				<Value><![CDATA[
 	UPDATE [Team] 
 	SET [Name] = @name,
-	[Division] = @division,
+	[DivisionId] = @divisionId,
 	[Cash] = @cash,
-	[StadiumCapacity] = @stadiumCapacity
+	[StadiumCapacity] = @stadiumCapacity,
+	[YearFormed] = @yearFormed,
+	[GameDetailsId] = @gameDetailsId
 	WHERE [Id] = @id
 RETURN 0]]></Value>
 			</Property>
@@ -3730,36 +4879,48 @@ RETURN 0]]></Value>
 					<References Name="[dbo].[Team].[Name]" />
 				</Entry>
 				<Entry>
-					<References Name="[dbo].[sp_UpdateTeam].[@name]" />
+					<References Name="[dbo].[spUpdateTeam].[@name]" />
 				</Entry>
 				<Entry>
-					<References Name="[dbo].[Team].[Division]" />
+					<References Name="[dbo].[Team].[DivisionId]" />
 				</Entry>
 				<Entry>
-					<References Name="[dbo].[sp_UpdateTeam].[@division]" />
+					<References Name="[dbo].[spUpdateTeam].[@divisionId]" />
 				</Entry>
 				<Entry>
 					<References Name="[dbo].[Team].[Cash]" />
 				</Entry>
 				<Entry>
-					<References Name="[dbo].[sp_UpdateTeam].[@cash]" />
+					<References Name="[dbo].[spUpdateTeam].[@cash]" />
 				</Entry>
 				<Entry>
 					<References Name="[dbo].[Team].[StadiumCapacity]" />
 				</Entry>
 				<Entry>
-					<References Name="[dbo].[sp_UpdateTeam].[@stadiumCapacity]" />
+					<References Name="[dbo].[spUpdateTeam].[@stadiumCapacity]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Team].[YearFormed]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spUpdateTeam].[@yearFormed]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Team].[GameDetailsId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spUpdateTeam].[@gameDetailsId]" />
 				</Entry>
 				<Entry>
 					<References Name="[dbo].[Team].[Id]" />
 				</Entry>
 				<Entry>
-					<References Name="[dbo].[sp_UpdateTeam].[@id]" />
+					<References Name="[dbo].[spUpdateTeam].[@id]" />
 				</Entry>
 			</Relationship>
 			<Relationship Name="Parameters">
 				<Entry>
-					<Element Type="SqlSubroutineParameter" Name="[dbo].[sp_UpdateTeam].[@id]">
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUpdateTeam].[@id]">
 						<Relationship Name="Type">
 							<Entry>
 								<Element Type="SqlTypeSpecifier">
@@ -3774,7 +4935,7 @@ RETURN 0]]></Value>
 					</Element>
 				</Entry>
 				<Entry>
-					<Element Type="SqlSubroutineParameter" Name="[dbo].[sp_UpdateTeam].[@name]">
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUpdateTeam].[@name]">
 						<Relationship Name="Type">
 							<Entry>
 								<Element Type="SqlTypeSpecifier">
@@ -3790,7 +4951,7 @@ RETURN 0]]></Value>
 					</Element>
 				</Entry>
 				<Entry>
-					<Element Type="SqlSubroutineParameter" Name="[dbo].[sp_UpdateTeam].[@division]">
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUpdateTeam].[@divisionId]">
 						<Relationship Name="Type">
 							<Entry>
 								<Element Type="SqlTypeSpecifier">
@@ -3805,7 +4966,7 @@ RETURN 0]]></Value>
 					</Element>
 				</Entry>
 				<Entry>
-					<Element Type="SqlSubroutineParameter" Name="[dbo].[sp_UpdateTeam].[@cash]">
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUpdateTeam].[@cash]">
 						<Relationship Name="Type">
 							<Entry>
 								<Element Type="SqlTypeSpecifier">
@@ -3820,7 +4981,37 @@ RETURN 0]]></Value>
 					</Element>
 				</Entry>
 				<Entry>
-					<Element Type="SqlSubroutineParameter" Name="[dbo].[sp_UpdateTeam].[@stadiumCapacity]">
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUpdateTeam].[@stadiumCapacity]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUpdateTeam].[@yearFormed]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUpdateTeam].[@gameDetailsId]">
 						<Relationship Name="Type">
 							<Entry>
 								<Element Type="SqlTypeSpecifier">
@@ -3841,10 +5032,10 @@ RETURN 0]]></Value>
 				</Entry>
 			</Relationship>
 			<Annotation Type="SysCommentsObjectAnnotation">
-				<Property Name="Length" Value="280" />
+				<Property Name="Length" Value="392" />
 				<Property Name="StartLine" Value="1" />
 				<Property Name="StartColumn" Value="1" />
-				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[sp_UpdateTeam]&#xD;&#xA;&#x9;@id int,&#xD;&#xA;&#x9;@name nvarchar(250),&#xD;&#xA;&#x9;@division int,&#xD;&#xA;&#x9;@cash int,&#xD;&#xA;&#x9;@stadiumCapacity int&#xD;&#xA;AS" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spUpdateTeam]&#xD;&#xA;&#x9;@id int,&#xD;&#xA;&#x9;@name nvarchar(250),&#xD;&#xA;&#x9;@divisionId int,&#xD;&#xA;&#x9;@cash int,&#xD;&#xA;&#x9;@stadiumCapacity int,&#xD;&#xA;&#x9;@yearFormed int,&#xD;&#xA;&#x9;@gameDetailsId int&#xD;&#xA;AS" />
 			</Annotation>
 		</Element>
 		<Element Type="SqlTable" Name="[dbo].[Team]">
@@ -3885,7 +5076,7 @@ RETURN 0]]></Value>
 					</Element>
 				</Entry>
 				<Entry>
-					<Element Type="SqlSimpleColumn" Name="[dbo].[Team].[Division]">
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Team].[DivisionId]">
 						<Relationship Name="TypeSpecifier">
 							<Entry>
 								<Element Type="SqlTypeSpecifier">
@@ -3943,7 +5134,22 @@ RETURN 0]]></Value>
 								</Element>
 							</Entry>
 						</Relationship>
-						<AttachedAnnotation Disambiguator="14" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Team].[GameDetailsId]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
 					</Element>
 				</Entry>
 			</Relationship>
@@ -3952,6 +5158,7 @@ RETURN 0]]></Value>
 					<References ExternalSource="BuiltIns" Name="[dbo]" />
 				</Entry>
 			</Relationship>
+			<AttachedAnnotation Disambiguator="13" />
 		</Element>
 		<Element Type="SqlTable" Name="[dbo].[Transfer]">
 			<Property Name="IsAnsiNullsOn" Value="True" />
@@ -3971,7 +5178,7 @@ RETURN 0]]></Value>
 								</Element>
 							</Entry>
 						</Relationship>
-						<AttachedAnnotation Disambiguator="9" />
+						<AttachedAnnotation Disambiguator="5" />
 					</Element>
 				</Entry>
 				<Entry>
@@ -4055,6 +5262,22 @@ RETURN 0]]></Value>
 				</Entry>
 				<Entry>
 					<Element Type="SqlSimpleColumn" Name="[dbo].[Transfer].[TransferValue]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Transfer].[GameDetailsId]">
 						<Property Name="IsNullable" Value="False" />
 						<Relationship Name="TypeSpecifier">
 							<Entry>

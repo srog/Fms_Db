@@ -1,12 +1,12 @@
 ﻿CREATE PROCEDURE [dbo].[spUpdateGameDetails]
 	@id int,
-	@currentYear int,
+	@currentSeasonId int,
 	@currentWeek int,
 	@managerName nvarchar(250),
 	@teamId int
 AS
 	UPDATE [GameDetails] 
-	SET [CurrentYear] = @currentYear,
+	SET [CurrentSeasonid] = @currentSeasonId,
 		[CurrentWeek] = @currentWeek,
 		[ManagerName] = @managerName,
 		[TeamId] = @teamId

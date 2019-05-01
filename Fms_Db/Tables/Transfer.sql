@@ -6,6 +6,7 @@
 	[Week] INT,
 	[TeamFromId] INT NOT NULL,
 	[TeamToId] INT NOT NULL,
-	[TransferValue] INT NOT NULL
+	[TransferValue] INT NOT NULL, 
+    [GameDetailsId] INT NOT NULL
 
 )

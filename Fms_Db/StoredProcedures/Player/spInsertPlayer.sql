@@ -7,10 +7,17 @@
 	@value int,
 	@retired bit,
 	@injuredWeeks int,
+	@gameDetailsId int,
 	@id int OUTPUT
 AS
-	INSERT INTO [Player] ([Name], [Age], [Rating], [Position], [TeamId], [Value], [Retired], [InjuredWeeks])
-	VALUES (@name, @age, @rating, @position, @teamId, @value, @retired, @injuredWeeks)
+DECLARE @result int
+	INSERT INTO [Player] ([Name], [Age], [Rating], [Position], [TeamId], [Value], [Retired], [InjuredWeeks], [GameDetailsId])
+	VALUES (@name, @age, @rating, @position, @teamId, @value, @retired, @injuredWeeks, @gameDetailsId)
 
 	SET @id = SCOPE_IDENTITY()
-RETURN 0
+
+	IF @@ERROR = 0 
+     SET @result  = 1
+  ELSE SET @result = 0
+
+	RETURN @result

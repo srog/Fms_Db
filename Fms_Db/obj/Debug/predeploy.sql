@@ -10,6 +10,4 @@
 --------------------------------------------------------------------------------------
 */
 --:r .\SeedData\TearDown.sql
---:r .\SeedData\Divisions.sql
---:r .\SeedData\Teams.sql
 GO

@@ -1,0 +1,64 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       None
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       The column [dbo].[News].[GameDetailsId] on table [dbo].[News] must be added, but the column has no default value and
+         does not allow NULL values. If the table contains data, the ALTER script will not work. To avoid this issue you must
+         either: add a default value to the column, mark it as allowing NULL values, or enable the generation of smart-defaults
+         as a deployment option.
+       The column [dbo].[Player].[GameDetailsId] on table [dbo].[Player] must be added, but the column has no default value and
+         does not allow NULL values. If the table contains data, the ALTER script will not work. To avoid this issue you must
+         either: add a default value to the column, mark it as allowing NULL values, or enable the generation of smart-defaults
+         as a deployment option.
+       The column [dbo].[Team].[GameDetailsId] on table [dbo].[Team] must be added, but the column has no default value and
+         does not allow NULL values. If the table contains data, the ALTER script will not work. To avoid this issue you must
+         either: add a default value to the column, mark it as allowing NULL values, or enable the generation of smart-defaults
+         as a deployment option.
+       The column [dbo].[Transfer].[GameDetailsId] on table [dbo].[Transfer] must be added, but the column has no default value
+         and does not allow NULL values. If the table contains data, the ALTER script will not work. To avoid this issue you must
+         either: add a default value to the column, mark it as allowing NULL values, or enable the generation of smart-defaults
+         as a deployment option.
+
+** User actions
+     Rename
+       [dbo].[Season].[GameDetailsId] (Column)
+     Alter
+       [dbo].[News] (Table)
+       [dbo].[Player] (Table)
+       [dbo].[Team] (Table)
+       [dbo].[Transfer] (Table)
+       [dbo].[spInsertPlayer] (Procedure)
+       [dbo].[spInsertTeam] (Procedure)
+       [dbo].[spUpdateTeam] (Procedure)
+       [dbo].[spGetSeasonsByGameId] (Procedure)
+       [dbo].[spInsertSeason] (Procedure)
+       [dbo].[spUpdateSeason] (Procedure)
+     Create
+       [dbo].[spAdvanceAllPlayerAges] (Procedure)
+       [dbo].[spGetPlayersByGame] (Procedure)
+       [dbo].[spGetTeamsByGame] (Procedure)
+       [dbo].[spRetirePlayer] (Procedure)
+
+** Supporting actions
+     Refresh
+       [dbo].[spGetNews] (Procedure)
+       [dbo].[spInsertNews] (Procedure)
+       [dbo].[spGetAllFreeAgents] (Procedure)
+       [dbo].[spGetAllPlayers] (Procedure)
+       [dbo].[spGetPlayerById] (Procedure)
+       [dbo].[spGetPlayersByTeamId] (Procedure)
+       [dbo].[spUpdatePlayer] (Procedure)
+       [dbo].[spGetAllTeams] (Procedure)
+       [dbo].[spGetTeamById] (Procedure)
+       [dbo].[spGetTeamsByDivision] (Procedure)
+
+The column [dbo].[News].[GameDetailsId] on table [dbo].[News] must be added, but the column has no default value and does not allow NULL values. If the table contains data, the ALTER script will not work. To avoid this issue you must either: add a default value to the column, mark it as allowing NULL values, or enable the generation of smart-defaults as a deployment option.
+The column [dbo].[Player].[GameDetailsId] on table [dbo].[Player] must be added, but the column has no default value and does not allow NULL values. If the table contains data, the ALTER script will not work. To avoid this issue you must either: add a default value to the column, mark it as allowing NULL values, or enable the generation of smart-defaults as a deployment option.
+The column [dbo].[Team].[GameDetailsId] on table [dbo].[Team] must be added, but the column has no default value and does not allow NULL values. If the table contains data, the ALTER script will not work. To avoid this issue you must either: add a default value to the column, mark it as allowing NULL values, or enable the generation of smart-defaults as a deployment option.
+The column [dbo].[Transfer].[GameDetailsId] on table [dbo].[Transfer] must be added, but the column has no default value and does not allow NULL values. If the table contains data, the ALTER script will not work. To avoid this issue you must either: add a default value to the column, mark it as allowing NULL values, or enable the generation of smart-defaults as a deployment option.
+If this deployment is executed, changes to [dbo].[Player] might introduce run-time errors in [dbo].[spGetPlayersByTeam].
+
