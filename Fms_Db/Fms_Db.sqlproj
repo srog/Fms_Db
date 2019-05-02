@@ -66,6 +66,7 @@
     <Folder Include="StoredProcedures\GameDetails" />
     <Folder Include="StoredProcedures\Match\MatchEvent" />
     <Folder Include="StoredProcedures\Match\MatchGoal" />
+    <Folder Include="StoredProcedures\Team\TeamSeason" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Tables\Team.sql" />
@@ -113,6 +114,11 @@
     <Build Include="StoredProcedures\Match\MatchGoal\spInsertMatchGoal.sql" />
     <Build Include="StoredProcedures\Match\MatchGoal\spUpdateMatchGoal.sql" />
     <Build Include="Tables\TeamSeason.sql" />
+    <Build Include="StoredProcedures\Team\TeamSeason\spAddResultToTeamSeason.sql" />
+    <Build Include="StoredProcedures\Team\TeamSeason\spGetTeamSeasonById.sql" />
+    <Build Include="StoredProcedures\Team\TeamSeason\spGetTeamSeasons.sql" />
+    <Build Include="StoredProcedures\Team\TeamSeason\spInsertTeamSeason.sql" />
+    <Build Include="StoredProcedures\Team\TeamSeason\spRecalculateTeamSeason.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Fms_Db_SqlExpress.publish.xml" />

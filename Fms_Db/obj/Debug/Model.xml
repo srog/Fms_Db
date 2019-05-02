@@ -1616,6 +1616,180 @@
 				</Entry>
 			</Relationship>
 		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[spAddResultToTeamSeason]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+
+	DECLARE @currentPlayed int
+	DECLARE @currentWon int
+	DECLARE @currentDrawn int
+	DECLARE @currentLost int
+	DECLARE @currentPoints int
+	DECLARE @currentGoalsFor int
+	DECLARE @currentGoalsAgainst int
+	
+	SELECT 
+		@currentPlayed = [Played],
+		@currentWon = [Won],
+		@currentDrawn = [Drawn],
+		@currentLost = [Lost],
+		@currentPoints = [Points],
+		@currentGoalsFor = [GoalsFor],
+		@currentGoalsAgainst = [GoalsAgainst]	
+	FROM [TeamSeason] WHERE [Id] = @id 
+
+	IF @scoreFor > @scoreAgainst 
+	BEGIN
+		SET @currentWon = @currentWon + 1
+		SET @currentPoints = @currentPoints + 3
+	END
+
+	IF @scoreFor < @scoreAgainst 
+	BEGIN
+		SET @currentLost = @currentLost + 1
+	END
+
+	IF @scoreFor = @scoreAgainst 
+	BEGIN
+		SET @currentDrawn = @currentDrawn + 1
+		SET @currentPoints = @currentPoints + 1
+	END
+
+	SET @currentGoalsFor = @currentGoalsFor + @scoreFor
+	SET @currentGoalsAgainst = @currentGoalsAgainst + @scoreAgainst
+
+
+	UPDATE [TeamSeason]
+	SET [Played] = @currentPlayed + 1,
+		[Won] = @currentWon,
+		[Drawn] = @currentDrawn,
+		[Lost] = @currentLost,
+		[Points] = @currentPoints,
+		[GoalsFor] = @currentGoalsFor,
+		[GoalsAgainst] = @currentGoalsAgainst
+	WHERE [Id] = @id
+
+RETURN 0]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TeamSeason]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TeamSeason].[Played]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TeamSeason].[Won]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TeamSeason].[Drawn]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TeamSeason].[Lost]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TeamSeason].[Points]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TeamSeason].[GoalsFor]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TeamSeason].[GoalsAgainst]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TeamSeason].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spAddResultToTeamSeason].[@id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spAddResultToTeamSeason].[@scoreFor]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spAddResultToTeamSeason].[@scoreAgainst]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spAddResultToTeamSeason].[@id]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spAddResultToTeamSeason].[@scoreFor]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spAddResultToTeamSeason].[@scoreAgainst]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="1318" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spAddResultToTeamSeason]&#xD;&#xA;&#x9;@id int,&#xD;&#xA;&#x9;@scoreFor int,&#xD;&#xA;&#x9;@scoreAgainst int&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
 		<Element Type="SqlProcedure" Name="[dbo].[spDeleteGameDetails]">
 			<Property Name="BodyScript">
 				<Value><![CDATA[
@@ -2688,6 +2862,182 @@ RETURN 0]]></Value>
 				<Property Name="StartLine" Value="1" />
 				<Property Name="StartColumn" Value="1" />
 				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spGetTeamsByGame]&#xD;&#xA;&#x9;@gameDetailsId int&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[spGetTeamSeasonById]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+	SELECT * FROM [TeamSeason] WHERE [Id] = @id
+RETURN 0]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[TeamSeason]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TeamSeason].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spGetTeamSeasonById].[@id]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spGetTeamSeasonById].[@id]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="114" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spGetTeamSeasonById]&#xD;&#xA;&#x9;@id int&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[spGetTeamSeasons]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+	SELECT * FROM [TeamSeason]
+	WHERE 
+	([TeamId] = @teamId OR @teamId IS NULL) AND
+	([SeasonId] = @seasonId OR @seasonId IS NULL) AND
+	([GameDetailsId] = @gameDetailsId OR @gameDetailsId IS NULL) AND
+	([DivisionId] = @divisionId OR @divisionId IS NULL) 
+	
+	
+RETURN 0]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[TeamSeason]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TeamSeason].[TeamId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spGetTeamSeasons].[@teamId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TeamSeason].[SeasonId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spGetTeamSeasons].[@seasonId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TeamSeason].[GameDetailsId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spGetTeamSeasons].[@gameDetailsId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TeamSeason].[DivisionId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spGetTeamSeasons].[@divisionId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spGetTeamSeasons].[@teamId]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[null]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spGetTeamSeasons].[@seasonId]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[null]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spGetTeamSeasons].[@gameDetailsId]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[null]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spGetTeamSeasons].[@divisionId]">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[null]]></Value>
+						</Property>
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="420" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spGetTeamSeasons]&#xD;&#xA;&#x9;@teamId int = null,&#xD;&#xA;&#x9;@seasonId int  = null,&#xD;&#xA;&#x9;@gameDetailsId int = null,&#xD;&#xA;&#x9;@divisionId int = null&#xD;&#xA;AS" />
 			</Annotation>
 		</Element>
 		<Element Type="SqlProcedure" Name="[dbo].[spInsertGameDetails]">
@@ -4421,6 +4771,470 @@ DECLARE @result int
 				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spInsertTeam]&#xD;&#xA;&#xD;&#xA;@name nvarchar(250),&#xD;&#xA;&#x9;@divisionId int,&#xD;&#xA;&#x9;@cash int,&#xD;&#xA;&#x9;@stadiumCapacity int,&#xD;&#xA;&#x9;@yearFormed int,&#xD;&#xA;&#x9;@gameDetailsId int,&#xD;&#xA;&#x9;@id int OUTPUT&#xD;&#xA;AS" />
 			</Annotation>
 		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[spInsertTeamSeason]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+DECLARE @result int
+	INSERT INTO [TeamSeason] ([GameDetailsId], [SeasonId], [TeamId], [DivisionId], 
+				[Played], [Won], [Drawn], [Lost], [Points], [GoalsFor], [GoalsAgainst], [Position])
+	VALUES (@gameDetailsId, @seasonId, @teamId, @divisionId, 0,0,0,0,0,0,0,0)
+
+	SET @id = SCOPE_IDENTITY()
+
+	IF @@ERROR = 0 
+     SET @result  = 1
+  ELSE SET @result = 0
+
+	RETURN @result]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TeamSeason]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TeamSeason].[GameDetailsId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TeamSeason].[SeasonId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TeamSeason].[TeamId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TeamSeason].[DivisionId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TeamSeason].[Played]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TeamSeason].[Won]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TeamSeason].[Drawn]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TeamSeason].[Lost]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TeamSeason].[Points]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TeamSeason].[GoalsFor]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TeamSeason].[GoalsAgainst]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TeamSeason].[Position]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spInsertTeamSeason].[@gameDetailsId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spInsertTeamSeason].[@seasonId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spInsertTeamSeason].[@teamId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spInsertTeamSeason].[@divisionId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spInsertTeamSeason].[@id]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spInsertTeamSeason].[@teamId]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spInsertTeamSeason].[@gameDetailsId]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spInsertTeamSeason].[@divisionId]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spInsertTeamSeason].[@seasonId]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spInsertTeamSeason].[@id]">
+						<Property Name="IsOutput" Value="True" />
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="525" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spInsertTeamSeason]&#xD;&#xA;&#xD;&#xA;&#x9;@teamId int,&#xD;&#xA;&#x9;@gameDetailsId int,&#xD;&#xA;&#x9;@divisionId int,&#xD;&#xA;&#x9;@seasonId int,&#x9;&#xD;&#xA;&#x9;@id int OUTPUT&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[spRecalculateTeamSeason]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+	DECLARE @teamId int
+	DECLARE @seasonId int
+	DECLARE @gameDetailsId int
+	DECLARE @divisionId int
+
+	DECLARE @played int
+	DECLARE @won int
+	DECLARE @drawn int
+	DECLARE @lost int
+	DECLARE @points int
+	DECLARE @goalsFor int
+	DECLARE @goalsAgainst int
+
+	SELECT @teamId = [TeamId], @gameDetailsId = [GameDetailsId], @seasonId = [SeasonId], @divisionId = [DivisionId]
+	FROM [TeamSeason]
+	WHERE [Id] = @id
+
+	SELECT @played = 
+				COUNT(*) 
+				FROM [Match] 
+				WHERE ([HomeTeamId] = @teamId OR [AwayTeamId] = @teamId)
+				AND [SeasonId] = @seasonId 
+				AND [GameDetailsId] = @gameDetailsId
+				AND [DivisionId] = @divisionId
+				AND [Completed] = 1
+
+	DECLARE @wonhome int, @wonaway int
+
+	SELECT @wonhome = 
+				COUNT(*) 
+				FROM [Match] 
+				WHERE [HomeTeamId] = @teamId 
+				AND [SeasonId] = @seasonId 
+				AND [GameDetailsId] = @gameDetailsId
+				AND [DivisionId] = @divisionId
+				AND [Completed] = 1
+				AND [HomeTeamScore] > [AwayTeamScore]
+
+	SELECT @wonaway =
+				COUNT(*) 
+				FROM [Match] 
+				WHERE [AwayTeamId] = @teamId 
+				AND [SeasonId] = @seasonId 
+				AND [GameDetailsId] = @gameDetailsId
+				AND [DivisionId] = @divisionId
+				AND [Completed] = 1
+				AND [HomeTeamScore] < [AwayTeamScore]
+
+	SET @won = @wonhome + @wonaway
+
+	DECLARE @losthome int, @lostaway int
+
+	SELECT @losthome = 
+				COUNT(*) 
+				FROM [Match] 
+				WHERE [HomeTeamId] = @teamId 
+				AND [SeasonId] = @seasonId 
+				AND [GameDetailsId] = @gameDetailsId
+				AND [DivisionId] = @divisionId
+				AND [Completed] = 1
+				AND [HomeTeamScore] < [AwayTeamScore]
+
+	SELECT @lostaway =
+				COUNT(*) 
+				FROM [Match] 
+				WHERE [AwayTeamId] = @teamId 
+				AND [SeasonId] = @seasonId 
+				AND [GameDetailsId] = @gameDetailsId
+				AND [DivisionId] = @divisionId
+				AND [Completed] = 1
+				AND [HomeTeamScore] > [AwayTeamScore]
+
+	SET @lost = @losthome + @lostaway
+
+	SELECT @drawn = 
+				COUNT(*) 
+				FROM [Match] 
+				WHERE ([HomeTeamId] = @teamId OR [AwayTeamId] = @teamId)
+				AND [SeasonId] = @seasonId 
+				AND [GameDetailsId] = @gameDetailsId
+				AND [DivisionId] = @divisionId
+				AND [Completed] = 1
+				AND [HomeTeamScore] = [AwayTeamScore]
+
+	DECLARE @homegoalsfor int, @awaygoalsfor int
+	SELECT @homegoalsfor = 
+				SUM([HomeTeamScore]) 
+				FROM [Match] 
+				WHERE [HomeTeamId] = @teamId 
+				AND [SeasonId] = @seasonId 
+				AND [GameDetailsId] = @gameDetailsId
+				AND [DivisionId] = @divisionId
+				AND [Completed] = 1
+	SELECT @awaygoalsfor = 
+				SUM([AwayTeamScore]) 
+				FROM [Match] 
+				WHERE [AwayTeamId] = @teamId 
+				AND [SeasonId] = @seasonId 
+				AND [GameDetailsId] = @gameDetailsId
+				AND [DivisionId] = @divisionId
+				AND [Completed] = 1
+	SET @goalsFor = @homegoalsfor + @awaygoalsfor
+
+	DECLARE @homegoalsagainst int, @awaygoalsagainst int
+	SELECT @homegoalsagainst = 
+				SUM([AwayTeamScore]) 
+				FROM [Match] 
+				WHERE [HomeTeamId] = @teamId 
+				AND [SeasonId] = @seasonId 
+				AND [GameDetailsId] = @gameDetailsId
+				AND [DivisionId] = @divisionId
+				AND [Completed] = 1
+	SELECT @awaygoalsagainst = 
+				SUM([HomeTeamScore]) 
+				FROM [Match] 
+				WHERE [AwayTeamId] = @teamId 
+				AND [SeasonId] = @seasonId 
+				AND [GameDetailsId] = @gameDetailsId
+				AND [DivisionId] = @divisionId
+				AND [Completed] = 1
+	SET @goalsAgainst = @homegoalsagainst + @awaygoalsagainst
+	
+	SET @points = (@won * 3) + @drawn
+
+	UPDATE [TeamSeason] 
+	SET [Played] = @played,
+		[Won] = @won,
+		[Drawn] = @drawn,
+		[Lost] = @lost,
+		[GoalsFor] = @goalsFor,
+		[GoalsAgainst] = @goalsAgainst,
+		[Points] = @points
+	WHERE [Id] = @id
+
+
+RETURN 0]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TeamSeason]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TeamSeason].[TeamId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TeamSeason].[GameDetailsId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TeamSeason].[SeasonId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TeamSeason].[DivisionId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TeamSeason].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spRecalculateTeamSeason].[@id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Match]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Match].[HomeTeamId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Match].[AwayTeamId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Match].[SeasonId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Match].[GameDetailsId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Match].[DivisionId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Match].[Completed]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Match].[HomeTeamScore]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Match].[AwayTeamScore]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TeamSeason].[Played]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TeamSeason].[Won]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TeamSeason].[Drawn]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TeamSeason].[Lost]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TeamSeason].[GoalsFor]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TeamSeason].[GoalsAgainst]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[TeamSeason].[Points]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spRecalculateTeamSeason].[@id]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="3721" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spRecalculateTeamSeason]&#xD;&#xA;&#x9;@id int&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
 		<Element Type="SqlProcedure" Name="[dbo].[spUpdateGameDetails]">
 			<Property Name="BodyScript">
 				<Value><![CDATA[
@@ -4685,7 +5499,9 @@ RETURN 0]]></Value>
 				<Entry>
 					<References Name="[dbo].[TeamSeason].[TeamId]" />
 				</Entry>
-				<Entry />
+				<Entry>
+					<References Name="[dbo].[spRecalculateTeamSeason]" />
+				</Entry>
 			</Relationship>
 			<Relationship Name="Parameters">
 				<Entry>
