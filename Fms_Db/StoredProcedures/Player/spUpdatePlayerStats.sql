@@ -3,7 +3,9 @@
 	@cleanSheets int,
 	@games int,
 	@goals int,
-	@playerId int
+	@playerId int,
+	@redCards int,
+	@yellowCards int
 AS
 	DECLARE @result int
 
@@ -11,7 +13,9 @@ AS
 	[Assists] = @assists, 
 	[CleanSheets] = @cleanSheets, 
 	[Games] = @games, 
-	[Goals] = @goals 
+	[Goals] = @goals,
+	[RedCards] = @redCards,
+	[YellowCards] = @yellowCards
 	WHERE [PlayerId] = @playerId
 
 	IF @@ERROR = 0 

@@ -1,14 +1,16 @@
 ﻿CREATE PROCEDURE [dbo].[spInsertPlayerStats]
-	@assists int = 0,
-	@cleanSheets int = 0,
-	@games int = 0,
-	@goals int = 0,
+	@assists int,
+	@cleanSheets int,
+	@games int,
+	@goals int,
 	@playerId int,
+	@redCards int,
+	@yellowCards int,
 		@id int OUTPUT
 AS
 DECLARE @result int
-	INSERT INTO [PlayerStats] ([Assists], [CleanSheets], [Games], [Goals], [PlayerId])
-	VALUES (@assists, @cleanSheets, @games, @goals, @playerId)
+	INSERT INTO [PlayerStats] ([Assists], [CleanSheets], [Games], [Goals], [PlayerId], [RedCards], [YellowCards])
+	VALUES (@assists, @cleanSheets, @games, @goals, @playerId, @redCards, @yellowCards)
 SET @id = SCOPE_IDENTITY()
 
 	IF @@ERROR = 0 

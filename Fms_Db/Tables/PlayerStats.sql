@@ -6,5 +6,7 @@
     [Goals] INT NOT NULL, 
     [Assists] INT NOT NULL, 
     [CleanSheets] INT NOT NULL,
-	CONSTRAINT [PK_PlayerStats] PRIMARY KEY ([Id])
+	[RedCards] INT NOT NULL, 
+    [YellowCards] INT NOT NULL, 
+    CONSTRAINT [PK_PlayerStats] PRIMARY KEY ([Id])
 )
