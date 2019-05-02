@@ -8,5 +8,6 @@
 	[AwayTeamId] INT NOT NULL,
 	[HomeTeamScore] INT NOT NULL,
 	[AwayTeamScore] INT NOT NULL,
-	[Completed] BIT NOT NULL
+	[Completed] BIT NOT NULL, 
+    [GameDetailsId] INT NOT NULL
 )

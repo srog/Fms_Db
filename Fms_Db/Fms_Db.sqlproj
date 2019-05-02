@@ -64,6 +64,8 @@
     <Folder Include="StoredProcedures\Match" />
     <Folder Include="StoredProcedures\News" />
     <Folder Include="StoredProcedures\GameDetails" />
+    <Folder Include="StoredProcedures\Match\MatchEvent" />
+    <Folder Include="StoredProcedures\Match\MatchGoal" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Tables\Team.sql" />
@@ -98,6 +100,19 @@
     <Build Include="StoredProcedures\Team\spGetTeamsByGame.sql" />
     <Build Include="StoredProcedures\Team\spInsertTeam.sql" />
     <Build Include="StoredProcedures\Team\spUpdateTeam.sql" />
+    <Build Include="StoredProcedures\Match\spGetMatchById.sql" />
+    <Build Include="StoredProcedures\Match\spGetMatches.sql" />
+    <Build Include="StoredProcedures\Match\spInsertMatch.sql" />
+    <Build Include="StoredProcedures\Match\spUpdateMatch.sql" />
+    <Build Include="StoredProcedures\Match\MatchEvent\spGetMatchEventById.sql" />
+    <Build Include="StoredProcedures\Match\MatchEvent\spGetMatchEvents.sql" />
+    <Build Include="StoredProcedures\Match\MatchEvent\spInsertMatchEvent.sql" />
+    <Build Include="StoredProcedures\Match\MatchEvent\spUpdateMatchEvent.sql" />
+    <Build Include="StoredProcedures\Match\MatchGoal\spGetMatchGoalById.sql" />
+    <Build Include="StoredProcedures\Match\MatchGoal\spGetMatchGoals.sql" />
+    <Build Include="StoredProcedures\Match\MatchGoal\spInsertMatchGoal.sql" />
+    <Build Include="StoredProcedures\Match\MatchGoal\spUpdateMatchGoal.sql" />
+    <Build Include="Tables\TeamSeason.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Fms_Db_SqlExpress.publish.xml" />
