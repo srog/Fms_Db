@@ -5,7 +5,7 @@
 	@defending int = 0,
 	@form int = 0,
 	@handling int = 0,
-	@happinness int = 0,
+	@happiness int = 0,
 	@morale int = 0,
 	@passing int = 0,
 	@shooting int = 0,
@@ -18,13 +18,12 @@
 AS
 DECLARE @result int
 	INSERT INTO [PlayerAttributes] ([Aggression], [Crossing], [Defending], [Form], [Handling], 
-				[Happinness], [Morale], [Passing], [PlayerId], [Shooting], [Skills], [Speed], [Stamina], [Strength], [Tackling])
-				VALUES (@aggression, @crossing, @defending, @form, @handling, @happinness, @morale, @passing, @playerId,
+				[Happiness], [Morale], [Passing], [PlayerId], [Shooting], [Skills], [Speed], [Stamina], [Strength], [Tackling])
+				VALUES (@aggression, @crossing, @defending, @form, @handling, @happiness, @morale, @passing, @playerId,
 						@shooting, @skills, @speed, @stamina, @strength, @tackling)
-SET @id = SCOPE_IDENTITY()
 
-	IF @@ERROR = 0 
-     SET @result  = 1
-  ELSE SET @result = 0
+	SET @id = SCOPE_IDENTITY()
 
-	RETURN @result
+    SET @result  = @@ERROR  
+	SELECT @result
+RETURN @result

@@ -67,11 +67,11 @@
     <Folder Include="StoredProcedures\Match\MatchEvent" />
     <Folder Include="StoredProcedures\Match\MatchGoal" />
     <Folder Include="StoredProcedures\Team\TeamSeason" />
+    <Folder Include="StoredProcedures\Season" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Tables\Team.sql" />
     <Build Include="Tables\Player.sql" />
-    <Build Include="Tables\Division.sql" />
     <Build Include="Tables\PlayerStats.sql" />
     <Build Include="Tables\PlayerAttributes.sql" />
     <Build Include="Tables\GameDetails.sql" />
@@ -83,7 +83,6 @@
     <Build Include="Tables\Transfer.sql" />
     <Build Include="StoredProcedures\Player\spGetAllPlayers.sql" />
     <Build Include="StoredProcedures\Player\spGetPlayerById.sql" />
-    <Build Include="StoredProcedures\Player\spGetPlayersByTeam.sql" />
     <Build Include="StoredProcedures\Player\spInsertPlayer.sql" />
     <Build Include="StoredProcedures\Player\spInsertPlayerAttributes.sql" />
     <Build Include="StoredProcedures\Player\spInsertPlayerStats.sql" />
@@ -92,7 +91,6 @@
     <Build Include="StoredProcedures\Player\spUpdatePlayerStats.sql" />
     <Build Include="StoredProcedures\GameDetails\spDeleteGameDetails.sql" />
     <Build Include="StoredProcedures\GameDetails\spGetAllGameDetails.sql" />
-    <Build Include="StoredProcedures\GameDetails\spGetGameDetails.sql" />
     <Build Include="StoredProcedures\GameDetails\spInsertGameDetails.sql" />
     <Build Include="StoredProcedures\GameDetails\spUpdateGameDetails.sql" />
     <Build Include="StoredProcedures\Team\spGetAllTeams.sql" />
@@ -119,6 +117,19 @@
     <Build Include="StoredProcedures\Team\TeamSeason\spGetTeamSeasons.sql" />
     <Build Include="StoredProcedures\Team\TeamSeason\spInsertTeamSeason.sql" />
     <Build Include="StoredProcedures\Team\TeamSeason\spRecalculateTeamSeason.sql" />
+    <Build Include="StoredProcedures\News\spGetNews.sql" />
+    <Build Include="StoredProcedures\News\spInsertNews.sql" />
+    <Build Include="StoredProcedures\Player\spAdvanceAllPlayerAges.sql" />
+    <Build Include="StoredProcedures\Player\spGetPlayerAttributes.sql" />
+    <Build Include="StoredProcedures\Player\spGetPlayersByGame.sql" />
+    <Build Include="StoredProcedures\Player\spGetPlayerStats.sql" />
+    <Build Include="StoredProcedures\Player\spRetirePlayer.sql" />
+    <Build Include="StoredProcedures\Player\spGetPlayersByTeamId.sql" />
+    <Build Include="StoredProcedures\GameDetails\spGetGameDetailsById.sql" />
+    <Build Include="StoredProcedures\Season\spGetSeasonById.sql" />
+    <Build Include="StoredProcedures\Season\spGetSeasonsByGameId.sql" />
+    <Build Include="StoredProcedures\Season\spInsertSeason.sql" />
+    <Build Include="StoredProcedures\Season\spUpdateSeason.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Fms_Db_SqlExpress.publish.xml" />
@@ -127,5 +138,8 @@
   </ItemGroup>
   <ItemGroup>
     <PreDeploy Include="Script.PreDeployment1.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="Fms_Db.refactorlog" />
   </ItemGroup>
 </Project>

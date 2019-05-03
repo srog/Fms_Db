@@ -14,7 +14,7 @@
     [Form] INT NOT NULL, 
     [Morale] INT NOT NULL,
 	[Stamina] INT NOT NULL,
-	[Happinness] INT NOT NULL,
+	[Happiness] INT NOT NULL,
 	[Aggression] INT NOT NULL,
 	CONSTRAINT [PK_PlayerAttributes] PRIMARY KEY ([Id])
 )
