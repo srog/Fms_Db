@@ -1,5 +1,5 @@
 ﻿CREATE PROCEDURE [dbo].[spGetPlayerAttributes]
 	@playerId int
 AS
-	SELECT * FROM [PlayerAttributes] WHERE [PlayerId] = @playerId
+	SELECT * FROM [PlayerAttribute] WHERE [PlayerId] = @playerId
 RETURN 0
