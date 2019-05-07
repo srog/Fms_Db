@@ -14,10 +14,6 @@ D:\Code\FootManSim\Fms_Db\Fms_Db\bin\Debug\Fms_Db.pdb
 D:\Code\FootManSim\Fms_Db\Fms_Db\obj\Debug\Fms_Db.sqlprojAssemblyReference.cache
 D:\Code\FootManSim\Fms_Db\Fms_Db\obj\Debug\Fms_Db.dll
 D:\Code\FootManSim\Fms_Db\Fms_Db\obj\Debug\Fms_Db.pdb
-D:\Code\FootManSim\Fms_Db\Fms_Db\obj\Debug\Model.xml
-D:\Code\FootManSim\Fms_Db\Fms_Db\obj\Debug\refactor.xml
-D:\Code\FootManSim\Fms_Db\Fms_Db\obj\Debug\postdeploy.sql
-D:\Code\FootManSim\Fms_Db\Fms_Db\obj\Debug\predeploy.sql
 D:\Projects\Projects\FMS3\Fms_Db\Fms_Db\bin\Debug\Fms_Db.dacpac
 D:\Projects\Projects\FMS3\Fms_Db\Fms_Db\bin\Debug\Fms_Db.dll
 D:\Projects\Projects\FMS3\Fms_Db\Fms_Db\bin\Debug\Fms_Db.pdb

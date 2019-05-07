@@ -1,10 +1,10 @@
 ﻿CREATE PROCEDURE [dbo].[spInsertNews]
-	@seasonId int,
-	@divisionId int,
-	@week int,
-	@playerId int,
-	@teamId int,
-	@gameDetailsId int,
+	@seasonId int = null,
+	@divisionId int = null,
+	@week int = null,
+	@playerId int = null,
+	@teamId int = null,
+	@gameDetailsId int = null,
 	@newsText nvarchar(max),
 	@id int OUTPUT
 AS
