@@ -84,10 +84,8 @@
     <Build Include="StoredProcedures\Player\spGetAllPlayers.sql" />
     <Build Include="StoredProcedures\Player\spGetPlayerById.sql" />
     <Build Include="StoredProcedures\Player\spInsertPlayer.sql" />
-    <Build Include="StoredProcedures\Player\spInsertPlayerAttributes.sql" />
     <Build Include="StoredProcedures\Player\spInsertPlayerStats.sql" />
     <Build Include="StoredProcedures\Player\spUpdatePlayer.sql" />
-    <Build Include="StoredProcedures\Player\spUpdatePlayerAttributes.sql" />
     <Build Include="StoredProcedures\Player\spUpdatePlayerStats.sql" />
     <Build Include="StoredProcedures\GameDetails\spDeleteGameDetails.sql" />
     <Build Include="StoredProcedures\GameDetails\spGetAllGameDetails.sql" />
@@ -130,10 +128,13 @@
     <Build Include="StoredProcedures\Season\spGetSeasonsByGameId.sql" />
     <Build Include="StoredProcedures\Season\spInsertSeason.sql" />
     <Build Include="StoredProcedures\Season\spUpdateSeason.sql" />
+    <Build Include="Tables\PlayerAttribute.sql" />
+    <Build Include="StoredProcedures\Player\spInsertPlayerAttribute.sql" />
+    <Build Include="StoredProcedures\Player\spGetPlayerAttribute.sql" />
+    <Build Include="StoredProcedures\Player\spUpdatePlayerAttribute.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Fms_Db_SqlExpress.publish.xml" />
-    <None Include="SeedData\Teams.sql" />
     <None Include="SeedData\TearDown.sql" />
   </ItemGroup>
   <ItemGroup>
