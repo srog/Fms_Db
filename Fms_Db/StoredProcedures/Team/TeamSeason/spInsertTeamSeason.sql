@@ -4,6 +4,7 @@
 	@gameDetailsId int,
 	@divisionId int,
 	@seasonId int,	
+	@position int,
 	@id int OUTPUT
 AS
 DECLARE @result int

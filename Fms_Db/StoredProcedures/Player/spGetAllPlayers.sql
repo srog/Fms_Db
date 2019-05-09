@@ -1,4 +1,5 @@
 ﻿CREATE PROCEDURE [dbo].[spGetAllPlayers]
-AS
-	SELECT * FROM [Player]
+	@gameDetailsId int
+AS	
+	SELECT * FROM [Player] WHERE [GameDetailsId] = @gameDetailsId
 RETURN 0
