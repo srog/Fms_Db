@@ -1,5 +1,5 @@
 ﻿CREATE PROCEDURE [dbo].[spGetAllGameDetails]
 
 AS
-	SELECT * FROM [GameDetails]
+	SELECT * FROM [GameDetails] WHERE [TeamId] > 0
 RETURN 0

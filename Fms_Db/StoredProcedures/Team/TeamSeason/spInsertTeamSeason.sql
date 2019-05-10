@@ -10,7 +10,7 @@ AS
 DECLARE @result int
 	INSERT INTO [TeamSeason] ([GameDetailsId], [SeasonId], [TeamId], [DivisionId], 
 				[Played], [Won], [Drawn], [Lost], [Points], [GoalsFor], [GoalsAgainst], [Position])
-	VALUES (@gameDetailsId, @seasonId, @teamId, @divisionId, 0,0,0,0,0,0,0,0)
+	VALUES (@gameDetailsId, @seasonId, @teamId, @divisionId, 0,0,0,0,0,0,0,@position)
 
 	SET @id = SCOPE_IDENTITY()
 
