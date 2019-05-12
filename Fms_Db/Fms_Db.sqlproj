@@ -73,7 +73,6 @@
     <Build Include="Tables\Team.sql" />
     <Build Include="Tables\Player.sql" />
     <Build Include="Tables\PlayerStats.sql" />
-    <Build Include="Tables\PlayerAttributes.sql" />
     <Build Include="Tables\GameDetails.sql" />
     <Build Include="Tables\Season.sql" />
     <Build Include="Tables\Match.sql" />
@@ -132,6 +131,7 @@
     <Build Include="StoredProcedures\Player\spInsertPlayerAttribute.sql" />
     <Build Include="StoredProcedures\Player\spGetPlayerAttribute.sql" />
     <Build Include="StoredProcedures\Player\spUpdatePlayerAttribute.sql" />
+    <Build Include="StoredProcedures\Team\TeamSeason\spRecalculateDivisionPositions.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Fms_Db_SqlExpress.publish.xml" />
