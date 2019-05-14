@@ -11,8 +11,8 @@
 	@id int OUTPUT
 AS
 DECLARE @result int
-	INSERT INTO [Player] ([Name], [Age], [Rating], [Position], [TeamId], [Value], [Retired], [InjuredWeeks], [GameDetailsId])
-	VALUES (@name, @age, @rating, @position, @teamId, @value, @retired, @injuredWeeks, @gameDetailsId)
+	INSERT INTO [Player] ([Name], [Age], [Rating], [Position], [TeamId], [Value], [Retired], [InjuredWeeks], [GameDetailsId], [TeamSelection])
+	VALUES (@name, @age, @rating, @position, @teamId, @value, @retired, @injuredWeeks, @gameDetailsId, 0)
 
 	SET @id = SCOPE_IDENTITY()
 

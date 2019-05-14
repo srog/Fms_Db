@@ -6,11 +6,12 @@
 	@stadiumCapacity int,
 	@yearFormed int,
 	@gameDetailsId int,
+	@formationId int,
 	@id int OUTPUT
 AS
 DECLARE @result int
-	INSERT INTO [Team] ([Cash], [DivisionId], [Name], [StadiumCapacity], [YearFormed], [GameDetailsId])
-	VALUES (@cash, @divisionId, @name, @stadiumCapacity, @yearFormed, @gameDetailsId)
+	INSERT INTO [Team] ([Cash], [DivisionId], [Name], [StadiumCapacity], [YearFormed], [GameDetailsId], [FormationId])
+	VALUES (@cash, @divisionId, @name, @stadiumCapacity, @yearFormed, @gameDetailsId, @formationId)
 
 	SET @id = SCOPE_IDENTITY()
 

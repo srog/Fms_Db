@@ -5,7 +5,8 @@
 	@cash int,
 	@stadiumCapacity int,
 	@yearFormed int,
-	@gameDetailsId int
+	@gameDetailsId int,
+	@formationId int
 AS
 	UPDATE [Team] 
 	SET [Name] = @name,
@@ -13,6 +14,7 @@ AS
 	[Cash] = @cash,
 	[StadiumCapacity] = @stadiumCapacity,
 	[YearFormed] = @yearFormed,
-	[GameDetailsId] = @gameDetailsId
+	[GameDetailsId] = @gameDetailsId,
+	[FormationId] = @formationId
 	WHERE [Id] = @id
 RETURN 0

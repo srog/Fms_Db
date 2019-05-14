@@ -7,5 +7,6 @@
     [YearFormed] INT NULL, 
 	[StadiumCapacity] INT,
 	[GameDetailsId] INT NOT NULL,
+    [FormationId] INT NULL, 
     CONSTRAINT [PK_Team] PRIMARY KEY ([Id])    
 )

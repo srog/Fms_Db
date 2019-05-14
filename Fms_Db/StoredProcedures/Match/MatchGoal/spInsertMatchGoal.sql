@@ -15,8 +15,7 @@ AS
 
 SET @id = SCOPE_IDENTITY()
 
-	IF @@ERROR = 0 
-     SET @result  = 1
-  ELSE SET @result = 0
+    SET @result  = @@ERROR  
+	SELECT @result
 
 	RETURN @result

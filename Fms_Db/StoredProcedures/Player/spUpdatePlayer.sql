@@ -7,7 +7,8 @@
 	@teamId int,
 	@value int,
 	@retired bit,
-	@injuredWeeks int
+	@injuredWeeks int,
+	@teamSelection int
 AS
 DECLARE @result int
 
@@ -19,7 +20,8 @@ DECLARE @result int
 		[TeamId] = @teamId,
 		[Value] = @value,
 		[Retired] = @retired,
-		[InjuredWeeks] = @injuredWeeks
+		[InjuredWeeks] = @injuredWeeks,
+		[TeamSelection] = @teamSelection
 		WHERE [Id] = @id
 	IF @@ERROR = 0 
      SET @result  = 1
