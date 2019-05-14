@@ -87,7 +87,7 @@ AS
 
 	DECLARE @homegoalsfor int, @awaygoalsfor int
 	SELECT @homegoalsfor = 
-				SUM([HomeTeamScore]) 
+				COALESCE(SUM([HomeTeamScore]),0) 
 				FROM [Match] 
 				WHERE [HomeTeamId] = @teamId 
 				AND [SeasonId] = @seasonId 
@@ -95,7 +95,7 @@ AS
 				AND [DivisionId] = @divisionId
 				AND [Completed] = 1
 	SELECT @awaygoalsfor = 
-				SUM([AwayTeamScore]) 
+				COALESCE(SUM([AwayTeamScore]), 0) 
 				FROM [Match] 
 				WHERE [AwayTeamId] = @teamId 
 				AND [SeasonId] = @seasonId 
@@ -106,7 +106,7 @@ AS
 
 	DECLARE @homegoalsagainst int, @awaygoalsagainst int
 	SELECT @homegoalsagainst = 
-				SUM([AwayTeamScore]) 
+				COALESCE(SUM([AwayTeamScore]) , 0)
 				FROM [Match] 
 				WHERE [HomeTeamId] = @teamId 
 				AND [SeasonId] = @seasonId 
@@ -114,7 +114,7 @@ AS
 				AND [DivisionId] = @divisionId
 				AND [Completed] = 1
 	SELECT @awaygoalsagainst = 
-				SUM([HomeTeamScore]) 
+				COALESCE(SUM([HomeTeamScore]), 0) 
 				FROM [Match] 
 				WHERE [AwayTeamId] = @teamId 
 				AND [SeasonId] = @seasonId 
