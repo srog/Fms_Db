@@ -9,5 +9,6 @@
 	[HomeTeamScore] INT NOT NULL,
 	[AwayTeamScore] INT NOT NULL,
 	[Completed] BIT NOT NULL, 
-    [GameDetailsId] INT NOT NULL
+    [GameDetailsId] INT NOT NULL, 
+    [Attendance] INT NULL
 )

@@ -5,6 +5,7 @@
 	@week int = null,
 	@homeTeamId int = null,
 	@awayTeamId int = null,
+	@attendance int = null,
 	@completed bit = null
 
 AS
