@@ -9,6 +9,7 @@
 	[Value] INT,
 	[Retired] BIT NOT NULL, 
     [InjuredWeeks] INT NULL, 
+	[SuspendedWeeks] INT NULL,
     [GameDetailsId] INT NOT NULL, 
     [TeamSelection] INT NULL, 
     CONSTRAINT [PK_Player] PRIMARY KEY ([Id])
